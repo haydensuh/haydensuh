@@ -16,7 +16,7 @@ export function Header() {
           className="text-zinc-600 dark:text-zinc-500"
           delay={0.5}
         >
-          Product Designer
+          Product Designer with frontend literacy
         </TextEffect>
       </div>
     </header>

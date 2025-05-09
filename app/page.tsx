@@ -137,8 +137,9 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Focused on creating intuitive and performant web experiences.
-            Bridging the gap between design and development.
+            Driving intuitive and high-performance web experiences that align
+            design execution with business impact, leveraging frontend literacy
+            to bridge design and development.
           </p>
         </div>
       </motion.section>
@@ -147,12 +148,27 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+        <div className="flex justify-between">
+          <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+          <Link
+            href="/works"
+            className="text-sm text-zinc-500 dark:text-zinc-400"
+          >
+            View All
+          </Link>
+        </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
-              <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                <ProjectVideo src={project.video} />
+              <div className="relative rounded-2xl bg-zinc-50/40 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                {project.video && <ProjectVideo src={project.video} />}
+                {project.image && (
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="aspect-video w-full rounded-xl"
+                  />
+                )}
               </div>
               <div className="px-1">
                 <a
@@ -196,7 +212,7 @@ export default function Personal() {
                     <h4 className="font-normal dark:text-zinc-100">
                       {job.title}
                     </h4>
-                    <p className="text-zinc-500 dark:text-zinc-400">
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400">
                       {job.company}
                     </p>
                   </div>
