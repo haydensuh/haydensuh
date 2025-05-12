@@ -94,7 +94,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work3',
   },
   {
-    company: 'Bandi/Lunis(Seoul Book Center)',
+    company: 'Bandi/Lunis',
     title: 'UI/UX Designer',
     start: '2018.08',
     end: '2020.04',
@@ -102,7 +102,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work4',
   },
   {
-    company: 'Lotte Shopping Co., Ltd.',
+    company: 'Lotte Shopping',
     title: 'Web Designer',
     start: '2017.08',
     end: '2018.02',
