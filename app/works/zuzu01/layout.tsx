@@ -12,7 +12,7 @@ export default function ProjectDetailLayout({
 
   if (!authenticated) {
     return (
-      <div className="flex h-screen items-center justify-center bg-white dark:bg-black">
+      <div className="flex items-center justify-center bg-white py-20 dark:bg-black">
         <div className="flex flex-col gap-4 text-center">
           <h1 className="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
             Enter Password
