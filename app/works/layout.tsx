@@ -42,6 +42,7 @@ export default function WorksLayout({
           bounce: 0,
         }}
       />
+
       <div className="absolute top-24 right-4">
         <CopyButton />
       </div>

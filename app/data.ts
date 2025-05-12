@@ -7,6 +7,15 @@ type Project = {
   id: string
 }
 
+type AllWorks = {
+  name: string
+  description: string
+  link: string
+  video?: string
+  image?: string
+  id: string
+}
+
 type WorkExperience = {
   company: string
   title: string
@@ -30,41 +39,47 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
-    name: 'ZUZU',
-    description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: '/works/zuzu01',
+    name: '기업과 투자자의 투자 유치 지원 서비스 고도화',
+    description: '기투자자 기반 브로커(추천인) 시스템 설계',
+    link: '/works/invest-relation',
     image:
-      'https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208684/238423_zibcwg.png',
-    id: 'project1',
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
+    id: 'invest-relation',
   },
   {
-    name: 'Monomart',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
+    name: '회사 등록 플로우 개선',
+    description: '기다릴 필요 없이 바로 온보딩이 가능하도록',
+    link: '/works/company-registration',
     image:
-      'https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208879/23948_i4hjqv.png',
-    id: 'project2',
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
+    id: 'company-registration',
   },
 ]
 
-export const allWorks: Project[] = [
+export const ALL_WORKS: AllWorks[] = [
   {
-    name: 'ZUZU',
-    description:
-      'Advanced components and templates to craft beautiful websites.',
-    link: '/works/zuzu01',
+    name: '기업과 투자자의 투자 유치 지원 서비스 고도화',
+    description: '기투자자 기반 브로커(추천인) 시스템 설계',
+    link: '/works/invest-relation',
     image:
-      'https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208684/238423_zibcwg.png',
-    id: 'work1',
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
+    id: 'invest-relation',
   },
   {
-    name: 'Monomart',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: '/works/zuzu01',
+    name: '회사 등록 플로우 개선',
+    description: '기다릴 필요 없이 바로 온보딩이 가능하도록',
+    link: '/works/company-registration',
     image:
-      'https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208879/23948_i4hjqv.png',
-    id: 'work2',
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
+    id: 'company-registration',
+  },
+  {
+    name: '소집통지서 기능 개선',
+    description: '안건 내용 커스터마이징 기능 도입',
+    link: '/works/meeting-notice-agenda-details-edit',
+    image:
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321251_piuaqp.png',
+    id: 'meeting-notice-agenda-details-edit',
   },
 ]
 

@@ -163,7 +163,7 @@ export default function Personal() {
                 <ProjectVideo src={project.video} />
               ) : (
                 <Link href={project.link} className="group block">
-                  <div className="relative rounded-2xl bg-zinc-50/40 ring-1 ring-zinc-200/50 transition-all ring-inset group-hover:scale-[1.01] dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                  <div className="relative rounded-2xl bg-zinc-50 ring-1 ring-zinc-200/50 transition-all ring-inset group-hover:scale-[1.01] dark:bg-zinc-900 dark:ring-zinc-800/50">
                     <img
                       src={project.image}
                       alt={project.name}
@@ -171,7 +171,7 @@ export default function Personal() {
                       style={{ pointerEvents: 'auto' }}
                     />
                   </div>
-                  <div className="px-1 pt-1">
+                  <div className="px-1 pt-2">
                     <div className="font-base relative inline-block font-[450] text-zinc-900 dark:text-zinc-50">
                       {project.name}
                       <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full" />
@@ -232,7 +232,8 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-3 text-lg font-medium">Blog</h3>
-        <div className="flex flex-col space-y-0">
+        <p>Coming soon...</p>
+        {/* <div className="flex flex-col space-y-0">
           <AnimatedBackground
             enableHover
             className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
@@ -260,7 +261,7 @@ export default function Personal() {
               </Link>
             ))}
           </AnimatedBackground>
-        </div>
+        </div> */}
       </motion.section>
 
       <motion.section

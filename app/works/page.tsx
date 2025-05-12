@@ -1,6 +1,6 @@
 'use client'
 
-import { allWorks } from '../data'
+import { ALL_WORKS } from '../data'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -103,13 +103,13 @@ export default function WorksPage() {
           <h3 className="mb-5 text-lg font-medium"> All Projects</h3>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {allWorks.map((project) => (
+          {ALL_WORKS.map((project) => (
             <div key={project.name} className="space-y-2">
               {project.video ? (
                 <ProjectVideo src={project.video} />
               ) : (
                 <Link href={project.link} className="group block">
-                  <div className="relative rounded-2xl bg-zinc-50/40 ring-1 ring-zinc-200/50 transition-all ring-inset group-hover:scale-[1.01] dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                  <div className="relative rounded-2xl bg-zinc-50 ring-1 ring-zinc-200/50 transition-all ring-inset group-hover:scale-[1.01] dark:bg-zinc-950/40 dark:ring-zinc-800/50">
                     <img
                       src={project.image}
                       alt={project.name}

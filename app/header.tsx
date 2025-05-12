@@ -12,7 +12,7 @@ export function Header() {
             alt="logo"
             width={24}
             height={24}
-            className="rounded-full"
+            className="rounded-full dark:bg-zinc-800"
           />
           <Link href="/" className="font-medium text-black dark:text-white">
             Hayden Suh
