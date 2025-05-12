@@ -85,15 +85,15 @@ export const ALL_WORKS: AllWorks[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'ZUZU (Kodebox)',
+    company: '(주)코드박스 (ZUZU)',
     title: 'Product Designer',
     start: '2024.04',
-    end: 'Present',
+    end: '재직 중',
     link: 'https://zuzu.network/',
     id: 'work1',
   },
   {
-    company: 'LF Food',
+    company: '(주)LF Food',
     title: 'Product Designer',
     start: '2020.10',
     end: '2023.12',
@@ -101,15 +101,15 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work2',
   },
   {
-    company: 'The 6th day',
+    company: '더식스데이',
     title: 'UI/UX Designer',
     start: '2020.04',
     end: '2020.09',
-    link: 'https://www.dolobox.com/',
+    link: '',
     id: 'work3',
   },
   {
-    company: 'Bandi/Lunis(Seoul Book Center)',
+    company: '(주)서울문고 (Bandi/Lunis)',
     title: 'UI/UX Designer',
     start: '2018.08',
     end: '2020.04',
@@ -117,7 +117,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work4',
   },
   {
-    company: 'Lotte Shopping Co., Ltd.',
+    company: '(주)롯데쇼핑',
     title: 'Web Designer',
     start: '2017.08',
     end: '2018.02',
