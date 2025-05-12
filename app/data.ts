@@ -81,6 +81,14 @@ export const ALL_WORKS: AllWorks[] = [
       'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321251_piuaqp.png',
     id: 'meeting-notice-agenda-details-edit',
   },
+  {
+    name: '이해관계자 통합 관리',
+    description: '이해관계자 통합 관리 시스템 설계',
+    link: '/works/stakeholder-management',
+    image:
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321252_w4ykax.png',
+    id: 'stakeholder-management',
+  },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
@@ -101,7 +109,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work2',
   },
   {
-    company: '더식스데이',
+    company: '(주)더식스데이',
     title: 'UI/UX Designer',
     start: '2020.04',
     end: '2020.09',
@@ -109,7 +117,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work3',
   },
   {
-    company: '(주)서울문고 (Bandi/Lunis)',
+    company: '(주)서울문고 (반디앤루니스)',
     title: 'UI/UX Designer',
     start: '2018.08',
     end: '2020.04',
@@ -117,7 +125,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work4',
   },
   {
-    company: '(주)롯데쇼핑',
+    company: '(주)롯데쇼핑 (롭스)',
     title: 'Web Designer',
     start: '2017.08',
     end: '2018.02',

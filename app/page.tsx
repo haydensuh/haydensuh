@@ -153,7 +153,7 @@ export default function Personal() {
             href="/works"
             className="text-sm text-zinc-500 dark:text-zinc-400"
           >
-            View All
+            View all
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -171,7 +171,7 @@ export default function Personal() {
                       style={{ pointerEvents: 'auto' }}
                     />
                   </div>
-                  <div className="px-1 pt-2">
+                  <div className="px-1 py-2">
                     <div className="font-base relative inline-block font-[450] text-zinc-900 dark:text-zinc-50">
                       {project.name}
                       <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full" />
@@ -232,7 +232,7 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-3 text-lg font-medium">Blog</h3>
-        <p>Coming soon...</p>
+        <p className="mb-5 text-zinc-600 dark:text-zinc-400">Coming soon...</p>
         {/* <div className="flex flex-col space-y-0">
           <AnimatedBackground
             enableHover
@@ -262,6 +262,18 @@ export default function Personal() {
             ))}
           </AnimatedBackground>
         </div> */}
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-3 text-lg font-medium">About</h3>
+        <p className="mb-5 text-zinc-600 dark:text-zinc-400">
+          Driving intuitive and high-performance web experiences that align
+          design execution with business impact, leveraging frontend literacy to
+          bridge design and development.
+        </p>
       </motion.section>
 
       <motion.section
