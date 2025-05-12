@@ -109,11 +109,11 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work2',
   },
   {
-    company: '(주)더식스데이',
+    company: '(주)더식스데이 (2021년 GS리테일에 인수)',
     title: 'UI/UX Designer',
     start: '2020.04',
     end: '2020.09',
-    link: '',
+    link: 'https://www.aboutpet.co.kr/shop/home/',
     id: 'work3',
   },
   {
@@ -121,7 +121,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'UI/UX Designer',
     start: '2018.08',
     end: '2020.04',
-    link: '',
+    link: 'https://www.bandinlunis.com/front/main.do',
     id: 'work4',
   },
   {
@@ -129,7 +129,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     title: 'Web Designer',
     start: '2017.08',
     end: '2018.02',
-    link: '',
+    link: 'https://www.lotteon.com/p/display/main/lottelohbs?mall_no=7',
     id: 'work5',
   },
 ]
