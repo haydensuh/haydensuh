@@ -15,6 +15,9 @@ export const metadata: Metadata = {
   title: 'Hayden Suh Portfolio',
   description:
     'Product Designer with a strategic mindset and frontend literacy.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 const geist = Geist({
