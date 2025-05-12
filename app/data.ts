@@ -48,6 +48,50 @@ export const PROJECTS: Project[] = [
   },
 ]
 
+export const allWorks: Project[] = [
+  {
+    name: 'ZUZU',
+    description:
+      'Advanced components and templates to craft beautiful websites.',
+    link: '/works/zuzu01',
+    image:
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208684/238423_zibcwg.png',
+    id: 'work1',
+  },
+  {
+    name: 'Monomart',
+    description: 'UI kit to make beautiful, animated interfaces.',
+    link: 'https://motion-primitives.com/',
+    image:
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208879/23948_i4hjqv.png',
+    id: 'work2',
+  },
+  {
+    name: 'Monomart',
+    description: 'UI kit to make beautiful, animated interfaces.',
+    link: 'https://motion-primitives.com/',
+    image:
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208879/23948_i4hjqv.png',
+    id: 'work3',
+  },
+  {
+    name: 'Monomart',
+    description: 'UI kit to make beautiful, animated interfaces.',
+    link: 'https://motion-primitives.com/',
+    image:
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208879/23948_i4hjqv.png',
+    id: 'work4',
+  },
+  {
+    name: 'Monomart',
+    description: 'UI kit to make beautiful, animated interfaces.',
+    link: 'https://motion-primitives.com/',
+    image:
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208879/23948_i4hjqv.png',
+    id: 'work5',
+  },
+]
+
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
     company: 'ZUZU (Kodebox)',

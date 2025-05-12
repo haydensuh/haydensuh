@@ -166,11 +166,11 @@ export default function Personal() {
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="aspect-video w-full rounded-xl"
+                    className="block aspect-video w-full rounded-xl object-cover"
                   />
                 )}
               </div>
-              <div className="px-1">
+              <div className="px-1 pt-1">
                 <a
                   className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
                   href={project.link}
