@@ -12,7 +12,7 @@ type WorkExperience = {
   title: string
   start: string
   end: string
-  link: string
+  link?: string
   id: string
 }
 
@@ -61,34 +61,10 @@ export const allWorks: Project[] = [
   {
     name: 'Monomart',
     description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
+    link: '/works/zuzu01',
     image:
       'https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208879/23948_i4hjqv.png',
     id: 'work2',
-  },
-  {
-    name: 'Monomart',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
-    image:
-      'https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208879/23948_i4hjqv.png',
-    id: 'work3',
-  },
-  {
-    name: 'Monomart',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
-    image:
-      'https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208879/23948_i4hjqv.png',
-    id: 'work4',
-  },
-  {
-    name: 'Monomart',
-    description: 'UI kit to make beautiful, animated interfaces.',
-    link: 'https://motion-primitives.com/',
-    image:
-      'https://res.cloudinary.com/hazelsuh-site/image/upload/v1733208879/23948_i4hjqv.png',
-    id: 'work5',
   },
 ]
 
@@ -119,7 +95,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
   {
     company: 'Bandi/Lunis(Seoul Book Center)',
-    title: 'Web Designer(UI/UX/BX)',
+    title: 'UI/UX Designer',
     start: '2018.08',
     end: '2020.04',
     link: '',
@@ -127,7 +103,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
   {
     company: 'Lotte Shopping Co., Ltd.',
-    title: 'Graphic Web Designer',
+    title: 'Web Designer',
     start: '2017.08',
     end: '2018.02',
     link: '',

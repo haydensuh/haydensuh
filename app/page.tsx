@@ -137,9 +137,8 @@ export default function Personal() {
       >
         <div className="flex-1">
           <p className="text-zinc-600 dark:text-zinc-400">
-            Driving intuitive and high-performance web experiences that align
-            design execution with business impact, leveraging frontend literacy
-            to bridge design and development.
+            From complexity to clarity — I design to drive real impact with
+            empathy, clarity, and intent.
           </p>
         </div>
       </motion.section>
@@ -160,29 +159,29 @@ export default function Personal() {
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
-              <div className="relative rounded-2xl bg-zinc-50/40 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                {project.video && <ProjectVideo src={project.video} />}
-                {project.image && (
-                  <img
-                    src={project.image}
-                    alt={project.name}
-                    className="block aspect-video w-full rounded-xl object-cover"
-                  />
-                )}
-              </div>
-              <div className="px-1 pt-1">
-                <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
-                  href={project.link}
-                  target="_blank"
-                >
-                  {project.name}
-                  <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
-                </a>
-                <p className="text-base text-zinc-600 dark:text-zinc-400">
-                  {project.description}
-                </p>
-              </div>
+              {project.video ? (
+                <ProjectVideo src={project.video} />
+              ) : (
+                <Link href={project.link} className="group block">
+                  <div className="relative rounded-2xl bg-zinc-50/40 ring-1 ring-zinc-200/50 transition-all ring-inset group-hover:scale-[1.01] dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="block aspect-video w-full rounded-xl object-cover"
+                      style={{ pointerEvents: 'auto' }}
+                    />
+                  </div>
+                  <div className="px-1 pt-1">
+                    <div className="font-base relative inline-block font-[450] text-zinc-900 dark:text-zinc-50">
+                      {project.name}
+                      <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full" />
+                    </div>
+                    <p className="text-base text-zinc-600 dark:text-zinc-400">
+                      {project.description}
+                    </p>
+                  </div>
+                </Link>
+              )}
             </div>
           ))}
         </div>

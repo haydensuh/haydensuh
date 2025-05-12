@@ -8,10 +8,10 @@ export function Header() {
       <div>
         <div className="flex items-center gap-1">
           <img
-            src="https://res.cloudinary.com/hazelsuh-site/image/upload/computer_mouse_line_aiq22c.svg"
+            src="https://res.cloudinary.com/hazelsuh-site/image/upload/logo_cvb1n5.png"
             alt="logo"
-            width={16}
-            height={16}
+            width={24}
+            height={24}
             className="rounded-full"
           />
           <Link href="/" className="font-medium text-black dark:text-white">
@@ -23,9 +23,9 @@ export function Header() {
           preset="fade"
           per="char"
           className="text-zinc-600 dark:text-zinc-500"
-          delay={0.5}
+          delay={0.2}
         >
-          Product Designer with frontend literacy
+          Product Designer
         </TextEffect>
       </div>
     </header>

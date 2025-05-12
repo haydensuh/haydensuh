@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description:
     'Product Designer with a strategic mindset and frontend literacy.',
   icons: {
-    icon: '/favicon.ico',
+    icon: 'https://res.cloudinary.com/hazelsuh-site/image/upload/logo_cvb1n5.png',
   },
 }
 
