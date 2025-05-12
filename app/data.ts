@@ -39,7 +39,7 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
-    name: '기업과 투자자의 투자 유치 지원 서비스 고도화',
+    name: '투자 유치 지원 서비스 고도화',
     description: '기투자자 기반 브로커(추천인) 시스템 설계',
     link: '/works/invest-relation',
     image:
@@ -58,7 +58,7 @@ export const PROJECTS: Project[] = [
 
 export const ALL_WORKS: AllWorks[] = [
   {
-    name: '기업과 투자자의 투자 유치 지원 서비스 고도화',
+    name: '투자 유치 지원 서비스 고도화',
     description: '기투자자 기반 브로커(추천인) 시스템 설계',
     link: '/works/invest-relation',
     image:
