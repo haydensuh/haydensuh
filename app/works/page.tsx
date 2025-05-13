@@ -90,7 +90,7 @@ function ProjectVideo({ src }: ProjectVideoProps) {
 export default function WorksPage() {
   return (
     <motion.main
-      className="space-y-24"
+      className="space-y-12 py-12"
       variants={VARIANTS_CONTAINER}
       initial="hidden"
       animate="visible"
@@ -98,10 +98,17 @@ export default function WorksPage() {
       <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
+        className="space-y-6"
       >
-        <div className="mt-20">
-          <h3 className="mb-5 text-lg font-medium"> All Projects</h3>
-        </div>
+        <Link
+          href="/"
+          className="inline-flex items-center text-sm text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-100"
+        >
+          ← Back to home
+        </Link>
+
+        <h3 className="mb-5 text-lg font-medium">All Projects</h3>
+
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {ALL_WORKS.map((project) => (
             <div key={project.name} className="space-y-2">

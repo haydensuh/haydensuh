@@ -89,6 +89,14 @@ export const ALL_WORKS: AllWorks[] = [
       'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321252_w4ykax.png',
     id: 'stakeholder-management',
   },
+  {
+    name: '사업 목적 ai 추천',
+    description: '사업 개요를 바탕으로 ai 자동 추천',
+    link: '/works/business-purpose-ai-recommendation',
+    image:
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321252_w4ykax.png',
+    id: 'business-purpose-ai-recommendation',
+  },
 ]
 
 export const WORK_EXPERIENCE: WorkExperience[] = [

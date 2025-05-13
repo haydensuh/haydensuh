@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'motion/react'
-import { XIcon } from 'lucide-react'
+import { XIcon, ArrowRightIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import {
@@ -151,9 +151,13 @@ export default function Personal() {
           <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
           <Link
             href="/works"
-            className="text-sm text-zinc-500 dark:text-zinc-400"
+            className="group flex items-center gap-1 text-sm text-zinc-500 dark:text-zinc-400"
           >
             View all
+            <ArrowRightIcon
+              size={14}
+              className="transition-transform duration-150 ease-in-out group-hover:translate-x-1"
+            />
           </Link>
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -268,11 +272,23 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 text-lg font-medium">About</h3>
+        <div className="flex justify-between">
+          <h3 className="mb-5 text-lg font-medium">About</h3>
+          <Link
+            href="/about"
+            className="group flex items-center gap-1 text-sm text-zinc-500 dark:text-zinc-400"
+          >
+            Learn more
+            <ArrowRightIcon
+              size={14}
+              className="transition-transform duration-150 ease-in-out group-hover:translate-x-1"
+            />
+          </Link>
+        </div>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          Driving intuitive and high-performance web experiences that align
-          design execution with business impact, leveraging frontend literacy to
-          bridge design and development.
+          Driving intuitive and high-performance web experiences by aligning
+          design execution with business impact — bridging design and
+          development through frontend literacy and hands-on implementation.
         </p>
       </motion.section>
 
