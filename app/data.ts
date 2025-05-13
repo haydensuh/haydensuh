@@ -144,25 +144,25 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: 'Exploring the Intersection of Design, AI, and Design Engineering',
-    description: 'How AI is changing the way we design',
-    link: '/works/zuzu01',
-    uid: 'blog-1',
+    title: '추천은 출력이 아니다',
+    description: '사업목적 추천 기능을 설계하며 다시 생각한, AI 인터페이스',
+    link: '/blog/post-chat-ui',
+    uid: 'blog001',
   },
-  {
-    title: 'Why I left my job to start my own company',
-    description:
-      'A deep dive into my decision to leave my job and start my own company',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-2',
-  },
-  {
-    title: 'What I learned from my first year of freelancing',
-    description:
-      'A look back at my first year of freelancing and what I learned',
-    link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-    uid: 'blog-3',
-  },
+  // {
+  //   title: 'Why I left my job to start my own company',
+  //   description:
+  //     'A deep dive into my decision to leave my job and start my own company',
+  //   link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+  //   uid: 'blog-2',
+  // },
+  // {
+  //   title: 'What I learned from my first year of freelancing',
+  //   description:
+  //     'A look back at my first year of freelancing and what I learned',
+  //   link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
+  //   uid: 'blog-3',
+  // },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [

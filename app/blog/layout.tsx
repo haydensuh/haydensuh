@@ -2,6 +2,7 @@
 import { TextMorph } from '@/components/ui/text-morph'
 import { ScrollProgress } from '@/components/ui/scroll-progress'
 import { useEffect, useState } from 'react'
+import { BackButton } from '@/components/ui/back-button'
 
 function CopyButton() {
   const [text, setText] = useState('Copy')
@@ -42,6 +43,9 @@ export default function LayoutBlogPost({
           bounce: 0,
         }}
       />
+      <div className="mb-8">
+        <BackButton />
+      </div>
       <div className="absolute top-24 right-4">
         <CopyButton />
       </div>

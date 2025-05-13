@@ -236,8 +236,8 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-3 text-lg font-medium">Blog</h3>
-        <p className="mb-5 text-zinc-600 dark:text-zinc-400">Coming soon...</p>
-        {/* <div className="flex flex-col space-y-0">
+        {/* <p className="mb-5 text-zinc-600 dark:text-zinc-400">Coming soon...</p> */}
+        <div className="flex flex-col space-y-0">
           <AnimatedBackground
             enableHover
             className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
@@ -258,14 +258,14 @@ export default function Personal() {
                   <h4 className="font-normal dark:text-zinc-100">
                     {post.title}
                   </h4>
-                  <p className="text-zinc-500 dark:text-zinc-400">
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
                     {post.description}
                   </p>
                 </div>
               </Link>
             ))}
           </AnimatedBackground>
-        </div> */}
+        </div>
       </motion.section>
 
       <motion.section
