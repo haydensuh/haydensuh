@@ -147,8 +147,8 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <div className="flex justify-between">
-          <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+        <div className="mb-5 flex items-center justify-between">
+          <h3 className="text-lg font-medium">Selected Projects</h3>
           <Link
             href="/works"
             className="group flex items-center gap-1 text-sm text-zinc-500 dark:text-zinc-400"
@@ -272,8 +272,8 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <div className="flex justify-between">
-          <h3 className="mb-5 text-lg font-medium">About</h3>
+        <div className="mb-5 flex items-center justify-between">
+          <h3 className="text-lg font-medium">About</h3>
           <Link
             href="/about"
             className="group flex items-center gap-1 text-sm text-zinc-500 dark:text-zinc-400"
