@@ -3,6 +3,7 @@
 import Link from 'next/link'
 
 import { motion } from 'framer-motion'
+import { BackButton } from '@/components/ui/back-button'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -35,12 +36,9 @@ export default function About() {
         transition={TRANSITION_SECTION}
         className="space-y-6"
       >
-        <Link
-          href="/"
-          className="inline-flex items-center text-sm text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-100"
-        >
-          ← Back to home
-        </Link>
+        <div className="mb-8">
+          <BackButton />
+        </div>
 
         <h3 className="mb-5 text-lg font-medium">About Me</h3>
 

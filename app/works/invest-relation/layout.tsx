@@ -1,6 +1,8 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { TextMorph } from '@/components/ui/text-morph'
+import Link from 'next/link'
+import { BackButton } from '@/components/ui/back-button'
 
 function CopyButton() {
   const [text, setText] = useState('Copy')
@@ -69,7 +71,10 @@ export default function ProjectDetailLayout({
 
   return (
     <main className="prose prose-zinc dark:prose-invert mx-auto py-12">
-      <div className="absolute top-24 right-4">
+      <div className="mb-8">
+        <BackButton />
+      </div>
+      <div className="absolute top-20 right-4">
         <CopyButton />
       </div>
       {children}
