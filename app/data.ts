@@ -149,6 +149,12 @@ export const BLOG_POSTS: BlogPost[] = [
     link: '/blog/post-chat-ui',
     uid: 'blog001',
   },
+  {
+    title: '계약은 복잡하지만 작성은 간결하게',
+    description: '주주간계약서 작성 기능을 설계하며 배운 것들',
+    link: '/blog/shareholder-contract-experience',
+    uid: 'blog002',
+  },
   // {
   //   title: 'Why I left my job to start my own company',
   //   description:
