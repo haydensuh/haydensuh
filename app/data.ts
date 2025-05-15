@@ -32,6 +32,13 @@ type BlogPost = {
   uid: string
 }
 
+type BlogPostList = {
+  title: string
+  description: string
+  link: string
+  uid: string
+}
+
 type SocialLink = {
   label: string
   link: string
@@ -142,6 +149,21 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 ]
 
 export const BLOG_POSTS: BlogPost[] = [
+  {
+    title: 'A Recommendation Is Not Enough',
+    description: 'Rethinking AI UX through business purpose suggestions',
+    link: '/blog/post-chat-ui',
+    uid: 'blog001',
+  },
+  // {
+  //   title: '계약은 복잡하지만 작성은 간결하게',
+  //   description: '주주간계약서 작성 기능을 설계하며 배운 것들',
+  //   link: '/blog/shareholder-contract-experience',
+  //   uid: 'blog002',
+  // },
+]
+
+export const ALL_BLOG_POSTS: BlogPostList[] = [
   {
     title: 'A Recommendation Is Not Enough',
     description: 'Rethinking AI UX through business purpose suggestions',

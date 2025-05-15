@@ -2,7 +2,6 @@
 
 import { ALL_WORKS } from '../data'
 import Link from 'next/link'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { XIcon } from 'lucide-react'
 import {
@@ -21,11 +20,6 @@ const VARIANTS_CONTAINER = {
       staggerChildren: 0.15,
     },
   },
-}
-
-const VARIANTS_ITEM = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
 }
 
 const VARIANTS_SECTION = {
