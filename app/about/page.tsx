@@ -1,9 +1,18 @@
 'use client'
 
-import Link from 'next/link'
-
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { BackButton } from '@/components/ui/back-button'
+import { useState } from 'react'
+
+type AccordionItemProps = {
+  title: string
+  children: React.ReactNode
+}
+
+type AboutSectionData = {
+  title: string
+  content: React.ReactNode
+}
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -14,6 +23,7 @@ const VARIANTS_CONTAINER = {
     },
   },
 }
+
 const VARIANTS_SECTION = {
   hidden: { opacity: 0, y: 20, filter: 'blur(8px)' },
   visible: { opacity: 1, y: 0, filter: 'blur(0px)' },
@@ -22,6 +32,159 @@ const VARIANTS_SECTION = {
 const TRANSITION_SECTION = {
   duration: 0.3,
 }
+
+const AccordionItem = ({ title, children }: AccordionItemProps) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <div className="border-b border-zinc-200 pb-2 dark:border-zinc-700">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex w-full cursor-pointer items-end justify-between"
+      >
+        <h4 className="inline-block font-medium">{title}</h4>
+        <svg
+          className={`mb-3 h-4 w-4 transform transition-transform duration-500 ease-out ${
+            isOpen ? 'rotate-45' : ''
+          }`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M12 4v16m8-8H4"
+          />
+        </svg>
+      </button>
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{
+              height: 'auto',
+              opacity: 1,
+              y: 0,
+            }}
+            exit={{
+              height: 0,
+              opacity: 0,
+              y: 0,
+            }}
+            transition={{
+              height: {
+                duration: 0.4,
+                ease: [0.04, 0.62, 0.23, 0.98],
+              },
+              opacity: {
+                duration: 0.25,
+                ease: 'linear',
+              },
+            }}
+            className="overflow-hidden"
+          >
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
+const ABOUT_SECTIONS: AboutSectionData[] = [
+  {
+    title: 'Background',
+    content: (
+      <p className="text-zinc-600 dark:text-zinc-400">
+        I began my career in visual communication design, but it didn't take
+        long before I was drawn to how people think, hesitate, and decide. That
+        curiosity led me into UX, where I've spent the past 6 years designing
+        structured, human-centered workflows in complex domains like e-commerce,
+        legal tech and startup financing. <br />I currently work at ZUZU,
+        leading design for legal automation tools — from AI-powered funtions to
+        shareholder portals and investor matching. My role often blends product
+        strategy, UX, and system thinking, ensuring that messy real-world
+        scenarios translate into calm, confident user flows.
+      </p>
+    ),
+  },
+  {
+    title: 'Design Philosophy',
+    content: (
+      <>
+        <p className="text-zinc-600 dark:text-zinc-400">
+          <span className="font-semibold">From complexity to clarity —</span>{' '}
+          that's the foundation of everything I design.
+        </p>
+        <ul className="list-disc pl-4 text-zinc-600 dark:text-zinc-400">
+          <li>
+            I prioritize structured choices, contextual cues, and progressive
+            disclosure, so users can stay focused and informed without cognitive
+            fatigue.
+          </li>
+          <li>
+            I believe great UX isn't just about visual polish. It's about
+            guiding users through complexity without overwhelming them.
+          </li>
+          <li>
+            I love working where business logic meets human behavior — mapping
+            out workflows, asking "What matters at this step?", and designing
+            tools that empower, not confuse.
+          </li>
+        </ul>
+        <p className="text-zinc-600 dark:text-zinc-400">
+          At the heart of my work is empathy: the belief that on the other side
+          of every screen is a person with their own mental model, goals, and
+          constraints.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: 'Now & Next',
+    content: (
+      <>
+        <p className="text-zinc-600 dark:text-zinc-400">
+          Right now, I'm focused on:
+        </p>
+        <ul className="list-disc pl-4 text-zinc-600 dark:text-zinc-400">
+          <li>
+            Designing AI-assisted workflows that feel natural and transparent
+          </li>
+          <li>Building modular form systems for legal contracts and filings</li>
+          <li>
+            Supporting users with varying levels of legal and digital literacy
+          </li>
+          <li>
+            Bridging design and development through hands-on frontend
+            implementation
+          </li>
+        </ul>
+        <p className="text-zinc-600 dark:text-zinc-400">
+          Looking ahead, I'm exploring
+          <span className="font-bold">HCI research</span> and inclusive design
+          at scale. <br />I believe that truly impactful products are not just
+          functional — they're understandable, accessible, and empowering for
+          all.
+        </p>
+      </>
+    ),
+  },
+  {
+    title: 'Outside work',
+    content: (
+      <p className="text-zinc-600 dark:text-zinc-400">
+        I find inspiration in quiet moments and new perspectives — through
+        books, thoughtful travel, and time spent observing the world. I love
+        ideas and details that make people say, "Oh, that makes sense."
+        <br />
+        Also, proudly team pineapple on pizza.
+      </p>
+    ),
+  },
+]
 
 export default function About() {
   return (
@@ -40,40 +203,21 @@ export default function About() {
           <BackButton />
         </div>
 
-        <h3 className="mb-5 text-lg font-medium">About Me</h3>
+        <h3 className="mb-2 text-lg font-medium">Hayden Suh</h3>
 
-        <div className="prose dark:prose-invert">
-          <p className="text-lg text-zinc-600 dark:text-zinc-400">
-            I'm a designer and developer focused on creating intuitive and
-            high-performance web experiences. With a background in both design
-            and development, I bridge the gap between aesthetic vision and
-            technical implementation.
-          </p>
+        <p className="mb-5 text-zinc-600 dark:text-zinc-400">
+          I currently work at ZUZU as a Product Designer focused on improving
+          end-to-end workflows for corporate management — from streamlining
+          company registration, to designing tools that support legal automation
+          and enhance internal operations.
+        </p>
 
-          <h2 className="mt-8 text-xl font-semibold">My Approach</h2>
-          <p className="text-zinc-600 dark:text-zinc-400">
-            I believe in designing with purpose and developing with precision.
-            Every project I undertake is an opportunity to create something that
-            not only looks beautiful but also performs exceptionally well.
-          </p>
-
-          <h2 className="mt-8 text-xl font-semibold">Skills & Expertise</h2>
-          <ul className="list-disc pl-4 text-zinc-600 dark:text-zinc-400">
-            <li>UI/UX Design</li>
-            <li>Frontend Development</li>
-            <li>Design Systems</li>
-            <li>Performance Optimization</li>
-            <li>Responsive Design</li>
-            <li>Animation & Interaction</li>
-          </ul>
-
-          <h2 className="mt-8 text-xl font-semibold">Philosophy</h2>
-          <p className="text-zinc-600 dark:text-zinc-400">
-            I approach each project with a focus on user experience,
-            performance, and business impact. My goal is to create digital
-            experiences that are not just visually appealing, but also
-            intuitive, accessible, and aligned with business objectives.
-          </p>
+        <div className="prose dark:prose-invert space-y-3">
+          {ABOUT_SECTIONS.map((section) => (
+            <AccordionItem key={section.title} title={section.title}>
+              {section.content}
+            </AccordionItem>
+          ))}
         </div>
       </motion.section>
     </motion.main>
