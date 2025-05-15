@@ -1,61 +1,35 @@
 <Cover
-  src="https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321244_meyxqb.png"
+  src="https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321248_dfwsid.png"
   alt=""
   caption=""
 />
 
-# 추천은 출력이 아니다
+# A Recommendation Is Not Enough
 
-**사업목적 추천 기능을 설계하며 다시 생각한, AI 인터페이스**
+**Rethinking AI Interfaces Through the Lens of Business Purpose Suggestions**
 
----
-
-어떤 기능을 AI로 구현하면, 더 똑똑해질 수 있을까요?
-
-ZUZU에서는 법인 설립을 도와주는 과정에서 '사업 목적'을 입력하는 단계를 개선하고자 했습니다. 대부분의 사용자에게 이 부분은 어렵고 막막한 영역이었습니다. 정해진 형식이 있고, 법적으로 어긋나면 설립이 반려되기도 하죠.
-
-그래서 우리는 **사용자가 사업 개요를 작성하면 AI가 적절한 사업 목적을 추천해주는 기능**을 만들기로 했습니다.
-하지만 이 기능을 설계하면서 단순한 추천으로는 해결되지 않는 지점들을 마주하게 됐습니다.
+_Incorporating a company in Korea requires a legally defined ‘business purpose’ —  
+a step where many founders hesitate due to legal ambiguity and lack of precedent._
 
 ---
 
-## AI가 알려줬습니다. <br/>그런데 그 다음은요?
+What makes an AI feature actually smart?
 
-초기에는 이렇게 설계했습니다.
+At ZUZU, we set out to improve one of the most confusing parts of starting a company: writing your business purpose. For many users, this step felt ambiguous and intimidating. There’s a required format to follow, and if the wording is off, the registration can be rejected altogether.
 
-```plaintext
-추천된 사업 목적:
-- 소프트웨어 개발업
-- 플랫폼 서비스업
-- 정보처리 및 데이터베이스 구축업
-```
+So we decided to build a feature where **users write a brief business overview, and the AI recommends suitable business purposes** in return.
 
-사용자가 업종 키워드를 입력하면, LLM이 적절한 사업 목적을 보여주는 방식입니다.
-하지만 중간 점검 과정에서 흥미로운 관찰이 있었습니다.
-
-추천 결과는 별도로 테스트해보며 LLM이 적절한 사업 목적을 잘 추출해내고 있다는 점은 확인할 수 있었습니다. 한편, 피그마로 설계한 UI 시안을 팀 내에서 공유하며 중간 점검을 진행했을 때는 추천 결과를 보는 것만으로는 다음 행동으로 이어질 만한 유도력이 부족하다는 피드백이 나왔습니다.
-
-단순히 좋은 결과를 보여준다고 해서 사용자가 바로 선택하거나 확정 버튼을 누르는 것은 아니었습니다. 정답을 보여주는 것과 그 정답에 대해 사용자가 '무엇을 할 수 있을지'까지 안내하는 것은 완전히 다른 문제라는 점을 알게 되었습니다.
+But as we began designing this feature, we quickly learned that recommendations alone weren’t enough.
 
 ---
 
-## 우리는 출력을 원하지 않았습니다. <br/>인터랙션을 원했습니다.
+## AI gave us an answer. <br/>But then what?
 
-이 상황은 아무리 정교한 텍스트 출력이라도 그것만으로는 사용자의 행동을 자연스럽게 이끌어내기 어렵다는 점을 보여줍니다. LLM이 자연어를 바탕으로 훌륭한 결과물을 만들어내더라도 그것을 보고 사용자가 다음에 무엇을 해야 할지 직관적으로 이해하기는 쉽지 않았습니다.
-하지만 그 출력이 단지 '텍스트'로만 존재할 때 사용자가 그것과 **어떻게 상호작용해야 하는지**는 여전히 불분명합니다.
+Our first idea looked something like this:
 
-AI의 출력은 점점 더 많아지고 정교해지지만 그 출력을 **어떻게 다루게 할 것인가**는 디자이너의 몫입니다.
-
----
-
-### 그래서 우리는 인터페이스를 다시 설계했습니다.
-
-우리는 단순히 '보여주는 것'이 아니라 사용자가 '행동할 수 있는 구조'를 만들어야 했습니다.
-결과적으로, 아래와 같은 UI로 발전시켰습니다.
-
-<img
-  src="https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321245_ivv3re.png"
-  alt="첨부 이미지"
+<Image
+  src="https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427%E3%85%87321249_m07kei.png"
+  alt="image"
   style={{
     width: '100%',
     height: 'auto',
@@ -64,97 +38,142 @@ AI의 출력은 점점 더 많아지고 정교해지지만 그 출력을 **어�
   }}
 />
 
-#### 추천 항목 옆에 [+] 버튼
+```
+Recommended business purposes:
+- Manufacturing of lunchboxes and prepared meals
+- Retail sale of other processed food products
+- Manufacturing of other food products
+- ...
+```
 
-- 사용자는 클릭 한 번으로 사업 목적을 '선택된 항목'으로 보낼 수 있습니다.
+The user would enter keywords related to their business, and the LLM would return a list of relevant purpose statements.
 
-#### 선택 항목은 하단 목록으로 정리
+We tested the output separately and found that the LLM did a good job generating accurate suggestions. But when we shared a Figma prototype internally for feedback, an unexpected issue came up: **simply showing the recommendations wasn’t enough to prompt the next action.**
 
-- 선택된 사업 목적은 바로 아래에 정리되며, [-] 버튼으로 삭제할 수 있습니다.
-
-#### 직접 입력 기능 추가
-
-- AI가 제안하지 못한 항목은 텍스트 필드를 통해 직접 입력할 수 있습니다.
-
-#### 최종 선택한 사업목적으로 설립 등기에 진행
-
-- 사용자의 선택이 곧 결과물이 됩니다.
-
-#### 순서 편집 기능
-
-- 사용자는 중요도에 따라 사업 목적의 순서를 직접 정렬할 수 있습니다.
-
-이 플로우는 단순한 추천 시스템이 아니라, 사용자가 제안을 수용하고, 변형하고, 의사를 반영할 수 있는 **조작 가능한 인터페이스**를 만드는 과정이었습니다.
+Even when the suggestions looked right, people didn’t immediately choose or confirm them.  
+That’s when we realized — showing the “correct” answer and guiding the user toward what to do with it are two very different things.
 
 ---
 
-### 단순 출력 ↔ 상호작용 가능한 출력
+## We Didn't Just Want Output. <br/>We wanted Interaction.
 
-- **목적**: 단순 출력에서는 사용자가 내용을 단순히 '보기'만 할 수 있습니다. 반면 상호작용 가능한 출력에서는 사용자가 항목을 선택하거나, 수정하고, 새로운 내용을 직접 입력할 수 있습니다.
+This experience showed us that no matter how polished a piece of text is, it rarely leads to user action on its own. Even when an LLM generates great results in natural language, users often struggle to intuitively understand what to do next.
 
-- **결과물**: 단순 출력은 긴 리스트 형태로 스크롤되는 정보를 제공하지만, 상호작용 출력은 사용자가 직접 조작 가능한 UI로 구성되어 있어 보다 능동적인 참여가 가능합니다.
+When AI outputs exist only as plain text, it’s still unclear **how users are supposed to interact with them.**
 
-- **상태 변화**: 단순 출력에서는 사용자의 행동에 따른 변화가 없습니다. 하지만 상호작용 출력에서는 사용자의 선택이나 입력에 따라 시스템 상태가 실시간으로 변화합니다.
-
-- **경험**: 단순 출력은 정보를 '보여주는 것'에 초점을 맞추지만, 상호작용 출력은 사용자의 목적을 중심으로 인터페이스를 설계하여 보다 목적 지향적인 경험을 제공합니다.
+As AI-generated content becomes more abundant and sophisticated, the real challenge shifts to **how we help users act on that output** — and that responsibility falls squarely on the designer.
 
 ---
 
-### 분류 기준과 자동화의 딜레마
+### So We Redesigned the Interface
 
-우리는 한국표준산업분류표(KSIC)를 참고해 자동 추천을 구성했습니다. 추천 결과 자체는 꽤 정확했고, LLM이 제안하는 사업 목적도 실제 기업 설명과 잘 들어맞는 경우가 많았습니다.
+Rather than simply showing results, we needed to create a structure where users could take meaningful action.  
+That led us to the following UI design:
 
-하지만 추천의 신뢰도를 높이기 위해서는 단순히 맞는 결과를 보여주는 것만으로는 부족했습니다. 예를 들어 분류 코드를 지어내는 현상이 나타나기도 했고 분류명이 지나치게 추상적인 경우에는 법무 검토 단계에서 반려될 가능성도 있었습니다.
+<Image
+  src="https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321248_dfwsid.png"
+  alt="image"
+  style={{
+    width: '100%',
+    height: 'auto',
+    backgroundColor: 'rgba(0, 0, 0, 0.02)',
+    borderRadius: '8px',
+  }}
+/>
 
-사용자가 결과를 믿고 선택하기 위해서는 그 결과가 왜 도출되었는지 설명할 수 있어야 했습니다. 그래서 다음과 같은 조치를 설계에 반영했습니다:
+#### [+] Button Next to Each Recommendation
 
-- 사용자에게는 분류명만 보여주고 혼선을 줄 수 있는 코드값은 UI에 노출하지 않기
-- 한국표준산업분류와 실제 유사 업종들의 사업 목적을 참고했다는 추천 근거를 함께 제시하여 결과의 신뢰도와 납득 가능성 확보
+- With a single click, users can move a suggested business purpose to the “selected” list.
 
-결국 단순히 정보를 보여주는 것을 넘어서 사용자가 그 정보를 믿고 선택할 수 있도록 판단 근거를 드러내고 구조를 재설계했습니다.
+#### Selected Items Appear in a List Below
 
----
+- Chosen items are neatly organized in a list below, and users can remove them using the [-] button.
 
-## 추천은 인터페이스다
+#### Manual Input Option
 
-AI가 뱉은 텍스트 하나는 사실 그 자체로는 아무 의미도 없습니다.
-그걸 어떤 방식으로 보여주고 사용자가 그것을 어떻게 조작하게 하느냐에 따라 **UX 전체가 달라지게 됩니다.**
+- If the AI doesn’t suggest what the user wants, they can manually add a new item through a text field.
 
-최종적으로 이번 프로젝트에서 우리는 다음과 같은 흐름을 설계했습니다:
+#### Final Selection Used for Company Registration
 
-1. 사용자가 사업개요를 입력하면 AI가 이를 분석해 사업목적을 제안합니다 (한국표준산업분류 및 ZUZU 내부 데이터 기반)
-2. 사용자는 이를 직접 선택하거나 자신만의 항목을 추가할 수 있습니다
-3. 필요 시 순서를 조정하거나 삭제할 수 있습니다
-4. 최종적으로 사용자가 정한 사업 목적이 법인 설립 등기 문서에 그대로 반영됩니다
+- The user’s confirmed selection becomes the actual content submitted for incorporation.
 
----
+#### Reorder Functionality
 
-## 우리가 진짜 만들고 싶었던 것은
+- Users can reorder the list based on priority or importance.
 
-**출력**이 아니라, **행동 가능한 구조**였습니다.<br/>
-**말**이 아니라, **도구**였고요.
-
-> 출력은 끝이 아니라 시작이어야 한다.
-> AI가 뭘 말했는지가 중요한 게 아니라,
-> 사용자가 무엇을 할 수 있는지가 더 중요하다.
-
----
-
-## 마무리하며
-
-AI 기능을 기획할 때, 우리는 종종 **무엇을 보여줄 것인가**에 집중합니다.
-하지만 진짜 질문은 이것이어야 합니다.
-
-> 사용자가 그것을 가지고 어떤 행동을 할 수 있을까?
-
-ZUZU의 사업목적 추천 기능은 그 질문에 대한 하나의 실험이었습니다.
-아직 개선할 지점은 많지만 우리는 분명히 하나의 방향을 찾았습니다.
-
-AI는 똑똑합니다.
-이제는 그 똑똑함이 사용자의 행동으로 연결될 수 있도록 돕는 것, 그게 우리 역할이라고 생각합니다.
+This flow wasn’t just about building a recommendation system — it was about creating a **manipulable interface** where users could accept, modify, and express their intent clearly.
 
 ---
 
-### 참고 자료
+### Static Output vs. Interactive Output
+
+- **Purpose**: In static output, users can only view the suggested content. In contrast, interactive output allows users to select, modify, or directly input new items.
+
+- **Result**: Static output provides a scrollable list of information, while interactive output offers a manipulable UI that enables users to actively engage with the content.
+
+- **State Change**: With static output, user actions don’t affect the system. But with interactive output, the interface updates in real time based on user selections or input.
+
+- **Experience**: Static output focuses on delivering information, whereas interactive output centers around the user’s goals — creating a more purposeful and guided experience.
+
+---
+
+### The Dilemma of Classification and Automation
+
+We based our recommendations on the Korean Standard Industrial Classification (KSIC). The suggestions themselves were fairly accurate, and the business purposes proposed by the LLM often aligned well with the company descriptions provided.
+
+However, simply showing plausible results wasn’t enough to build trust. In some cases, the model would fabricate classification codes, and when the suggested category names were too abstract, they risked being rejected during legal review.
+
+To help users trust and confidently select from the results, we needed to show **why** each recommendation was made. So we made a few key design decisions:
+
+- Only show the **category name**, not the classification code, to avoid unnecessary confusion
+- Provide context for each recommendation — such as how it aligns with KSIC categories and real-world examples from similar industries — to build credibility and make the logic behind the suggestions more understandable
+
+In the end, we went beyond simply displaying information. We redesigned the structure to clearly present reasoning, helping users feel confident in what they choose.
+
+---
+
+## A Recommendation Is an Interface
+
+A single line of AI-generated text, on its own, means very little.  
+It’s the way that text is presented — and more importantly, how users can interact with it — that shapes the entire UX.
+
+Ultimately, here’s the flow we designed for this feature:
+
+1. The user writes a short description of their business.  
+   The AI analyzes it and recommends relevant business purposes  
+   (based on KSIC and internal ZUZU data).
+2. The user can select from the suggestions or add their own.
+3. They can reorder or delete items if needed.
+4. The final selection is directly reflected in the company registration documents.
+
+---
+
+## What We Really Wanted to Build
+
+Not just **output**, but an **actionable structure**.  
+Not just **words**, but a **tool**.
+
+> Output shouldn’t be the end — it should be the beginning.
+
+> What the AI says matters less than what the user can do with it.
+
+---
+
+## Closing Thoughts
+
+When designing AI-powered features, we often focus on **what to show**.  
+But the real question should be:
+
+> What can the user actually do with it?
+
+ZUZU’s business purpose recommendation feature was our attempt to explore that question.  
+There’s still room for improvement, but we believe we’re headed in the right direction.
+
+AI is smart.  
+Now, it’s our job to make sure that intelligence helps users take meaningful action.
+
+---
+
+### Further Reading
 
 - [Post-Chat UI](https://allenpike.com/2025/post-chat-llm-ui)

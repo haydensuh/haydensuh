@@ -39,16 +39,17 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
-    name: '투자 유치 지원 서비스 고도화',
-    description: '기투자자 기반 브로커(추천인) 시스템 설계',
+    name: 'Enhancing Investor Engagement Services',
+    description:
+      'Designed a broker (referrer) system based on existing investors',
     link: '/works/invest-relation',
     image:
       'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
     id: 'invest-relation',
   },
   {
-    name: '회사 등록 플로우 개선',
-    description: '기다릴 필요 없이 바로 온보딩이 가능하도록',
+    name: 'Streamlining Company Registration Flow',
+    description: 'Enabling immediate onboarding without waiting',
     link: '/works/company-registration',
     image:
       'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
@@ -58,40 +59,42 @@ export const PROJECTS: Project[] = [
 
 export const ALL_WORKS: AllWorks[] = [
   {
-    name: '투자 유치 지원 서비스 고도화',
-    description: '기투자자 기반 브로커(추천인) 시스템 설계',
+    name: 'Enhancing Investor Engagement Services',
+    description:
+      'Designed a broker (referrer) system based on existing investors',
     link: '/works/invest-relation',
     image:
       'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
     id: 'invest-relation',
   },
   {
-    name: '회사 등록 플로우 개선',
-    description: '기다릴 필요 없이 바로 온보딩이 가능하도록',
+    name: 'Streamlining Company Registration Flow',
+    description: 'Enabling immediate onboarding without waiting',
     link: '/works/company-registration',
     image:
       'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
     id: 'company-registration',
   },
   {
-    name: '소집통지서 기능 개선',
-    description: '안건 내용 커스터마이징 기능 도입',
+    name: 'Improving Meeting Notice Functionality',
+    description: 'Introducing customizable agenda content',
     link: '/works/meeting-notice-agenda-details-edit',
     image:
       'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321251_piuaqp.png',
     id: 'meeting-notice-agenda-details-edit',
   },
   {
-    name: '이해관계자 통합 관리',
-    description: '이해관계자 통합 관리 시스템 설계',
+    name: 'Integrated Stakeholder Management',
+    description: 'Designing a unified stakeholder management system',
     link: '/works/stakeholder-management',
     image:
       'https://res.cloudinary.com/hazelsuh-site/image/upload/thumb_comingsoon_qjtgth.png',
     id: 'stakeholder-management',
   },
   {
-    name: '사업 목적 ai 추천',
-    description: '사업 개요를 바탕으로 ai 자동 추천',
+    name: 'AI-Powered Business Purpose Recommendation',
+    description:
+      'Automatically suggesting business purposes based on company descriptions',
     link: '/works/business-purpose-ai-recommendation',
     image:
       'https://res.cloudinary.com/hazelsuh-site/image/upload/thumb_comingsoon_qjtgth.png',
@@ -101,15 +104,15 @@ export const ALL_WORKS: AllWorks[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: '(주)코드박스 (ZUZU)',
+    company: 'Kodebox Co.,Ltd. (ZUZU)',
     title: 'Product Designer',
     start: '2024.04',
-    end: '재직 중',
+    end: 'Present',
     link: 'https://zuzu.network/',
     id: 'work1',
   },
   {
-    company: '(주)LF Food',
+    company: 'LF FOOD CORP.',
     title: 'Product Designer',
     start: '2020.10',
     end: '2023.12',
@@ -117,7 +120,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work2',
   },
   {
-    company: '(주)더식스데이 (2021년 GS리테일에 인수)',
+    company: 'The 6th Day Co., Ltd. (Acquired by GS Retail in 2021)',
     title: 'UI/UX Designer',
     start: '2020.04',
     end: '2020.09',
@@ -125,7 +128,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work3',
   },
   {
-    company: '(주)서울문고 (반디앤루니스)',
+    company: 'Seoul Book Center Co., Ltd. (Bandi/lunis)',
     title: 'UI/UX Designer',
     start: '2018.08',
     end: '2020.04',
@@ -133,7 +136,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work4',
   },
   {
-    company: '(주)롯데쇼핑 (롭스)',
+    company: "Lotte Shopping Co., Ltd. (Lohb's)",
     title: 'Web Designer',
     start: '2017.08',
     end: '2018.02',
@@ -144,38 +147,24 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
 
 export const BLOG_POSTS: BlogPost[] = [
   {
-    title: '추천은 출력이 아니다',
-    description: '사업목적 추천 기능을 설계하며 다시 생각한, AI 인터페이스',
+    title: 'A Recommendation Is Not Enough',
+    description: 'Rethinking AI UX through business purpose suggestions',
     link: '/blog/post-chat-ui',
     uid: 'blog001',
   },
-  {
-    title: '계약은 복잡하지만 작성은 간결하게',
-    description: '주주간계약서 작성 기능을 설계하며 배운 것들',
-    link: '/blog/shareholder-contract-experience',
-    uid: 'blog002',
-  },
   // {
-  //   title: 'Why I left my job to start my own company',
-  //   description:
-  //     'A deep dive into my decision to leave my job and start my own company',
-  //   link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-  //   uid: 'blog-2',
-  // },
-  // {
-  //   title: 'What I learned from my first year of freelancing',
-  //   description:
-  //     'A look back at my first year of freelancing and what I learned',
-  //   link: '/blog/exploring-the-intersection-of-design-ai-and-design-engineering',
-  //   uid: 'blog-3',
+  //   title: '계약은 복잡하지만 작성은 간결하게',
+  //   description: '주주간계약서 작성 기능을 설계하며 배운 것들',
+  //   link: '/blog/shareholder-contract-experience',
+  //   uid: 'blog002',
   // },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  {
-    label: 'Github',
-    link: 'https://github.com/haydensuh/haydensuh',
-  },
+  // {
+  //   label: 'Github',
+  //   link: 'https://github.com/haydensuh/haydensuh',
+  // },
   {
     label: 'LinkedIn',
     link: 'https://www.linkedin.com/in/hazelsuh',

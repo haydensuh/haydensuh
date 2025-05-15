@@ -116,7 +116,7 @@ export default function WorksPage() {
                 <ProjectVideo src={project.video} />
               ) : (
                 <Link href={project.link} className="group block">
-                  <div className="relative rounded-2xl bg-zinc-50 ring-1 ring-zinc-200/50 transition-all ring-inset group-hover:scale-[1.01] dark:bg-zinc-950/40 dark:ring-zinc-800/50">
+                  <div className="relative rounded-2xl bg-zinc-50 ring-1 ring-zinc-200/50 transition-all ring-inset group-hover:scale-[1.01] dark:bg-zinc-900 dark:ring-zinc-800/50">
                     <img
                       src={project.image}
                       alt={project.name}
