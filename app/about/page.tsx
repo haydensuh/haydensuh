@@ -163,7 +163,7 @@ const ABOUT_SECTIONS: AboutSectionData[] = [
           </li>
         </ul>
         <p className="text-zinc-600 dark:text-zinc-400">
-          Looking ahead, I'm exploring
+          Looking ahead, I'm exploring{' '}
           <span className="font-bold">HCI research</span> and inclusive design
           at scale. <br />I believe that truly impactful products are not just
           functional — they're understandable, accessible, and empowering for

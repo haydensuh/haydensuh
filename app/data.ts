@@ -86,7 +86,7 @@ export const ALL_WORKS: AllWorks[] = [
     description: '이해관계자 통합 관리 시스템 설계',
     link: '/works/stakeholder-management',
     image:
-      'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321252_w4ykax.png',
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/thumb_comingsoon_qjtgth.png',
     id: 'stakeholder-management',
   },
   {
@@ -94,7 +94,7 @@ export const ALL_WORKS: AllWorks[] = [
     description: '사업 개요를 바탕으로 ai 자동 추천',
     link: '/works/business-purpose-ai-recommendation',
     image:
-      'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321252_w4ykax.png',
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/thumb_comingsoon_qjtgth.png',
     id: 'business-purpose-ai-recommendation',
   },
 ]
