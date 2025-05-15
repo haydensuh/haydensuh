@@ -117,12 +117,18 @@ export default function WorksPage() {
               ) : (
                 <Link href={project.link} className="group block">
                   <div className="relative rounded-2xl bg-zinc-50 ring-1 ring-zinc-200/50 transition-all ring-inset group-hover:scale-[1.01] dark:bg-zinc-900 dark:ring-zinc-800/50">
-                    <img
-                      src={project.image}
-                      alt={project.name}
-                      className="block aspect-video w-full rounded-xl object-cover"
-                      style={{ pointerEvents: 'auto' }}
-                    />
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.name}
+                        className="block aspect-video w-full rounded-xl object-cover"
+                        style={{ pointerEvents: 'auto' }}
+                      />
+                    ) : (
+                      <div className="flex aspect-video w-full items-center justify-center rounded-xl text-zinc-500 dark:text-zinc-400">
+                        Coming soon...
+                      </div>
+                    )}
                   </div>
                   <div className="px-1 py-2">
                     <div className="font-base relative inline-block font-[450] text-zinc-900 dark:text-zinc-50">

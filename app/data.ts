@@ -87,8 +87,6 @@ export const ALL_WORKS: AllWorks[] = [
     name: 'Integrated Stakeholder Management',
     description: 'Designing a unified stakeholder management system',
     link: '/works/stakeholder-management',
-    image:
-      'https://res.cloudinary.com/hazelsuh-site/image/upload/thumb_comingsoon_qjtgth.png',
     id: 'stakeholder-management',
   },
   {
@@ -96,8 +94,6 @@ export const ALL_WORKS: AllWorks[] = [
     description:
       'Automatically suggesting business purposes based on company descriptions',
     link: '/works/business-purpose-ai-recommendation',
-    image:
-      'https://res.cloudinary.com/hazelsuh-site/image/upload/thumb_comingsoon_qjtgth.png',
     id: 'business-purpose-ai-recommendation',
   },
 ]
