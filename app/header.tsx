@@ -1,8 +1,20 @@
 'use client'
+
+import { useEffect, useState } from 'react'
 import { TextEffect } from '@/components/ui/text-effect'
 import Link from 'next/link'
-
+import { LogoutButton } from '@/components/ui/logout-button'
 export function Header() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+
+  useEffect(() => {
+    const token = document.cookie
+      .split('; ')
+      .find((row) => row.startsWith('auth_token='))
+      ?.split('=')[1]
+    setIsAuthenticated(token === 'valid')
+  }, [])
+
   return (
     <header className="mb-8 flex items-center justify-between">
       <div>
@@ -17,6 +29,7 @@ export function Header() {
           <Link href="/" className="font-medium text-black dark:text-white">
             Hayden Suh
           </Link>
+          {isAuthenticated && <LogoutButton />}
         </div>
         <TextEffect
           as="p"
