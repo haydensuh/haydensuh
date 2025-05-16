@@ -122,11 +122,12 @@ const ABOUT_SECTIONS: AboutSectionData[] = [
         long before I was drawn to how people think, hesitate, and decide. That
         curiosity led me into UX, where I've spent the past 6 years designing
         structured, human-centered workflows in complex domains like e-commerce,
-        legal tech and startup financing. <br />I currently work at ZUZU,
-        leading design for legal automation tools — from AI-powered funtions to
-        shareholder portals and investor matching. My role often blends product
-        strategy, UX, and system thinking, ensuring that messy real-world
-        scenarios translate into calm, confident user flows.
+        legal tech and startup financing. <br />I currently work at ZUZU as a
+        Product Designer, contributing to tools that support company operations
+        — from AI-assisted features to shareholder management and investor
+        matching systems. My role often blends product strategy, UX, and system
+        thinking, ensuring that messy real-world scenarios translate into clear
+        and reliable user flows.
       </p>
     ),
   },
@@ -170,12 +171,12 @@ const ABOUT_SECTIONS: AboutSectionData[] = [
           Right now, I'm focused on:
         </p>
         <ul className="list-disc pl-4 text-zinc-600 dark:text-zinc-400">
-          <li>
-            Designing AI-assisted workflows that feel natural and transparent
-          </li>
           <li>Building modular form systems for legal contracts and filings</li>
           <li>
             Supporting users with varying levels of legal and digital literacy
+          </li>
+          <li>
+            Designing AI-assisted workflows that feel natural and transparent
           </li>
           <li>
             Bridging design and development through hands-on frontend
