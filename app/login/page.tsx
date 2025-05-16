@@ -32,7 +32,7 @@ export default function LoginPage() {
           placeholder="Password"
           value={pass}
           onChange={(e) => setPass(e.target.value)}
-          className="rounded border px-4 py-2 text-center text-black"
+          className="rounded border border-zinc-500 px-4 py-2 text-center text-zinc-600 dark:text-zinc-400"
         />
         <button
           onClick={handleLogin}
