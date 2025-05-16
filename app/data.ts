@@ -153,14 +153,20 @@ export const BLOG_POSTS: BlogPost[] = [
     title: 'A Recommendation Is Not Enough',
     description: 'Rethinking AI UX through business purpose suggestions',
     link: '/blog/post-chat-ui',
-    uid: 'blog001',
+    uid: 'post-chat-ui',
   },
   // {
   //   title: '계약은 복잡하지만 작성은 간결하게',
   //   description: '주주간계약서 작성 기능을 설계하며 배운 것들',
   //   link: '/blog/shareholder-contract-experience',
-  //   uid: 'blog002',
+  //   uid: 'shareholder-contract-experience',
   // },
+  {
+    title: 'How Do We Define Satisfaction?',
+    description: 'Defining satisfaction through operational definition',
+    link: '/blog/zuzu-operational-definition',
+    uid: 'zuzu-operational-definition',
+  },
 ]
 
 export const ALL_BLOG_POSTS: BlogPostList[] = [
@@ -168,14 +174,20 @@ export const ALL_BLOG_POSTS: BlogPostList[] = [
     title: 'A Recommendation Is Not Enough',
     description: 'Rethinking AI UX through business purpose suggestions',
     link: '/blog/post-chat-ui',
-    uid: 'blog001',
+    uid: 'post-chat-ui',
   },
   // {
   //   title: '계약은 복잡하지만 작성은 간결하게',
   //   description: '주주간계약서 작성 기능을 설계하며 배운 것들',
   //   link: '/blog/shareholder-contract-experience',
-  //   uid: 'blog002',
+  //   uid: 'shareholder-contract-experience',
   // },
+  {
+    title: 'How Do We Define Satisfaction?',
+    description: 'Defining satisfaction through operational definition',
+    link: '/blog/zuzu-operational-definition',
+    uid: 'zuzu-operational-definition',
+  },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
