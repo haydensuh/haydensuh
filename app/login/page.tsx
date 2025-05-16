@@ -1,23 +1,25 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 export default function LoginPage() {
   const [pass, setPass] = useState('')
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const from = searchParams.get('from') || '/works'
 
   const handleLogin = async () => {
     const res = await fetch('/api/login', {
       method: 'POST',
-      body: JSON.stringify({ pass }), // ✅ ID 제거
+      body: JSON.stringify({ pass }),
     })
 
     if (res.ok) {
       router.refresh()
-      router.push('/works')
+      router.push(from)
     } else {
-      alert('로그인 실패!')
+      alert('Wrong password')
     }
   }
 

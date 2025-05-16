@@ -7,12 +7,11 @@ export function middleware(request: NextRequest) {
   const token = request.cookies.get('auth_token')?.value
   const pathname = request.nextUrl.pathname
 
-  if (pathname.startsWith('/login')) {
-    return NextResponse.next()
-  }
+  if (pathname.startsWith('/login')) return NextResponse.next()
 
   if (pathname.startsWith('/works') && token !== 'valid') {
     const loginUrl = new URL('/login', request.url)
+    loginUrl.searchParams.set('from', pathname) // 현재 경로 기억
     return NextResponse.redirect(loginUrl)
   }
 
