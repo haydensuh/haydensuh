@@ -3,15 +3,8 @@
 import { ALL_BLOG_POSTS } from '../data'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { XIcon } from 'lucide-react'
-import {
-  MorphingDialog,
-  MorphingDialogTrigger,
-  MorphingDialogContent,
-  MorphingDialogClose,
-  MorphingDialogContainer,
-} from '@/components/ui/morphing-dialog'
-
+import { AnimatedBackground } from '@/components/ui/animated-background'
+import { BackButton } from '@/components/ui/back-button'
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
   visible: {
@@ -43,31 +36,40 @@ export default function BlogPage() {
         transition={TRANSITION_SECTION}
         className="space-y-6"
       >
-        <Link
-          href="/"
-          className="inline-flex items-center text-sm text-zinc-500 hover:text-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-100"
-        >
-          ← Back to home
-        </Link>
+        <div className="mb-8">
+          <BackButton />
+        </div>
 
         <h3 className="mb-5 text-lg font-medium">All Posts</h3>
 
-        <div className="space-y-8">
-          {ALL_BLOG_POSTS.map((post) => (
-            <Link
-              key={post.uid}
-              className="-mx-3 rounded-xl px-3 py-3"
-              href={post.link}
-              data-id={post.uid}
-            >
-              <div className="flex flex-col space-y-1">
-                <h4 className="font-normal dark:text-zinc-100">{post.title}</h4>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                  {post.description}
-                </p>
-              </div>
-            </Link>
-          ))}
+        <div className="flex flex-col space-y-0">
+          <AnimatedBackground
+            enableHover
+            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
+            transition={{
+              type: 'spring',
+              bounce: 0,
+              duration: 0.2,
+            }}
+          >
+            {ALL_BLOG_POSTS.map((post) => (
+              <Link
+                key={post.uid}
+                className="-mx-3 rounded-xl px-3 py-3"
+                href={post.link}
+                data-id={post.uid}
+              >
+                <div className="flex flex-col space-y-1">
+                  <h4 className="font-normal dark:text-zinc-100">
+                    {post.title}
+                  </h4>
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                    {post.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </AnimatedBackground>
         </div>
       </motion.section>
     </motion.main>
