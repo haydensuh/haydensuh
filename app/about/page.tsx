@@ -163,36 +163,36 @@ const ABOUT_SECTIONS: AboutSectionData[] = [
       </>
     ),
   },
-  {
-    title: 'Now & Next',
-    content: (
-      <>
-        <p className="text-zinc-600 dark:text-zinc-400">
-          Right now, I'm focused on:
-        </p>
-        <ul className="list-disc pl-4 text-zinc-600 dark:text-zinc-400">
-          <li>Building modular form systems for legal contracts and filings</li>
-          <li>
-            Supporting users with varying levels of legal and digital literacy
-          </li>
-          <li>
-            Designing AI-assisted workflows that feel natural and transparent
-          </li>
-          <li>
-            Bridging design and development through hands-on frontend
-            implementation
-          </li>
-        </ul>
-        <p className="text-zinc-600 dark:text-zinc-400">
-          Looking ahead, I'm exploring{' '}
-          <span className="font-bold">HCI research</span> and inclusive design
-          at scale. <br />I believe that truly impactful products are not just
-          functional — they're understandable, accessible, and empowering for
-          all.
-        </p>
-      </>
-    ),
-  },
+  // {
+  //   title: 'Now & Next',
+  //   content: (
+  //     <>
+  //       <p className="text-zinc-600 dark:text-zinc-400">
+  //         Right now, I'm focused on:
+  //       </p>
+  //       <ul className="list-disc pl-4 text-zinc-600 dark:text-zinc-400">
+  //         <li>Building modular form systems for legal contracts and filings</li>
+  //         <li>
+  //           Supporting users with varying levels of legal and digital literacy
+  //         </li>
+  //         <li>
+  //           Designing AI-assisted workflows that feel natural and transparent
+  //         </li>
+  //         <li>
+  //           Bridging design and development through hands-on frontend
+  //           implementation
+  //         </li>
+  //       </ul>
+  //       <p className="text-zinc-600 dark:text-zinc-400">
+  //         Looking ahead, I'm exploring{' '}
+  //         <span className="font-bold">HCI research</span> and inclusive design
+  //         at scale. <br />I believe that truly impactful products are not just
+  //         functional — they're understandable, accessible, and empowering for
+  //         all.
+  //       </p>
+  //     </>
+  //   ),
+  // },
   {
     title: 'Outside work',
     content: (
