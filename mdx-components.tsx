@@ -11,14 +11,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       src: string
       alt: string
       caption: string
-    }) => {
-      return (
-        <figure className="rounded-xl bg-zinc-50 dark:bg-zinc-900">
-          <img src={src} alt={alt} className="rounded-xl" />
-          <figcaption className="text-center">{caption}</figcaption>
-        </figure>
-      )
-    },
+    }) => (
+      <figure className="rounded-xl bg-zinc-50 dark:bg-zinc-900">
+        <img src={src} alt={alt} className="rounded-xl" />
+        <figcaption className="text-center">{caption}</figcaption>
+      </figure>
+    ),
     Image: ({
       src,
       alt,
@@ -27,13 +25,11 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       src: string
       alt: string
       caption: string
-    }) => {
-      return (
-        <figure className="rounded-xl bg-zinc-50 dark:bg-zinc-900">
-          <img src={src} alt={alt} className="rounded-xl" />
-          <figcaption className="text-center">{caption}</figcaption>
-        </figure>
-      )
-    },
+    }) => (
+      <figure className="rounded-xl bg-zinc-50 dark:bg-zinc-900">
+        <img src={src} alt={alt} className="rounded-xl" />
+        <figcaption className="text-center">{caption}</figcaption>
+      </figure>
+    ),
   }
 }
