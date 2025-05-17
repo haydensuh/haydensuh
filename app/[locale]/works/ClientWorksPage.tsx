@@ -1,8 +1,11 @@
+// app/[locale]/works/ClientWorksPage.tsx
 'use client'
 
-import { ALL_WORKS } from '../data'
-import Link from 'next/link'
+import { useMemo } from 'react'
+import type { Locale } from '@/lib/i18n-config'
+import { ALL_WORKS } from '@/app/data'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { XIcon } from 'lucide-react'
 import {
   MorphingDialog,
@@ -32,19 +35,11 @@ const TRANSITION_SECTION = {
   duration: 0.3,
 }
 
-type ProjectVideoProps = {
-  src: string
-}
+type Props = { locale: Locale }
 
-function ProjectVideo({ src }: ProjectVideoProps) {
+function ProjectVideo({ src }: { src: string }) {
   return (
-    <MorphingDialog
-      transition={{
-        type: 'spring',
-        bounce: 0,
-        duration: 0.3,
-      }}
-    >
+    <MorphingDialog transition={{ type: 'spring', bounce: 0, duration: 0.3 }}>
       <MorphingDialogTrigger>
         <video
           src={src}
@@ -64,17 +59,7 @@ function ProjectVideo({ src }: ProjectVideoProps) {
             className="aspect-video h-[50vh] w-full rounded-xl md:h-[70vh]"
           />
         </MorphingDialogContent>
-        <MorphingDialogClose
-          className="fixed top-6 right-6 h-fit w-fit rounded-full bg-white p-1"
-          variants={{
-            initial: { opacity: 0 },
-            animate: {
-              opacity: 1,
-              transition: { delay: 0.3, duration: 0.1 },
-            },
-            exit: { opacity: 0, transition: { duration: 0 } },
-          }}
-        >
+        <MorphingDialogClose className="fixed top-6 right-6 h-fit w-fit rounded-full bg-white p-1">
           <XIcon className="h-5 w-5 text-zinc-500" />
         </MorphingDialogClose>
       </MorphingDialogContainer>
@@ -82,7 +67,9 @@ function ProjectVideo({ src }: ProjectVideoProps) {
   )
 }
 
-export default function WorksPage() {
+export default function ClientWorksPage({ locale }: Props) {
+  const works = useMemo(() => ALL_WORKS[locale] ?? [], [locale])
+
   return (
     <motion.main
       className="space-y-12 py-12"
@@ -102,12 +89,15 @@ export default function WorksPage() {
         <h3 className="mb-5 text-lg font-medium">All Projects</h3>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {ALL_WORKS.map((project) => (
+          {works.map((project) => (
             <div key={project.name} className="space-y-2">
               {project.video ? (
                 <ProjectVideo src={project.video} />
               ) : (
-                <Link href={project.link} className="group block">
+                <Link
+                  href={`/${locale}${project.link}`}
+                  className="group block"
+                >
                   <div className="relative rounded-2xl bg-zinc-50 ring-1 ring-zinc-200/50 transition-all ring-inset group-hover:scale-[1.01] dark:bg-zinc-900 dark:ring-zinc-800/50">
                     {project.image ? (
                       <img

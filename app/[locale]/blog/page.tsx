@@ -1,10 +1,11 @@
 'use client'
 
-import { ALL_BLOG_POSTS } from '../data'
+import { ALL_BLOG_POSTS } from '../../data'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { AnimatedBackground } from '@/components/ui/animated-background'
 import { BackButton } from '@/components/ui/back-button'
+import { usePathname } from 'next/navigation'
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
   visible: {
@@ -24,6 +25,10 @@ const TRANSITION_SECTION = {
   duration: 0.3,
 }
 export default function BlogPage() {
+  const pathname = usePathname()
+  const locale = pathname.split('/')[1] as 'en' | 'ko'
+
+  const AllBlogPosts = ALL_BLOG_POSTS[locale]
   return (
     <motion.main
       className="space-y-12 py-12"
@@ -52,7 +57,7 @@ export default function BlogPage() {
               duration: 0.2,
             }}
           >
-            {ALL_BLOG_POSTS.map((post) => (
+            {AllBlogPosts.map((post) => (
               <Link
                 key={post.uid}
                 className="-mx-3 rounded-xl px-3 py-3"

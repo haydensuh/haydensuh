@@ -3,6 +3,8 @@ import { AnimatedBackground } from '@/components/ui/animated-background'
 import { TextLoop } from '@/components/ui/text-loop'
 import { MonitorIcon, MoonIcon, SunIcon } from 'lucide-react'
 import { useTheme } from 'next-themes'
+import { useRouter } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 const THEMES_OPTIONS = [
@@ -66,6 +68,28 @@ function ThemeSwitch() {
   )
 }
 
+function LocaleSwitch() {
+  const pathname = usePathname()
+  const router = useRouter()
+
+  const toggleLocale = () => {
+    const newLocale = pathname.startsWith('/en') ? 'ko' : 'en'
+    const newPath = pathname.replace(/^\/(en|ko)/, '') || '/'
+    router.push(`/${newLocale}${newPath}`)
+  }
+
+  const label = pathname.startsWith('/en') ? '한' : 'En'
+
+  return (
+    <button
+      onClick={toggleLocale}
+      className="mx-4 hover:text-zinc-800 dark:hover:text-zinc-300"
+    >
+      {label}
+    </button>
+  )
+}
+
 export function Footer() {
   return (
     <footer className="mt-24 border-t border-zinc-100 px-0 py-4 dark:border-zinc-800">
@@ -76,7 +100,8 @@ export function Footer() {
             <span>Built with Motion-Primitives.</span>
           </TextLoop>
         </a>
-        <div className="text-xs text-zinc-400">
+        <div className="flex items-center text-xs text-zinc-400">
+          <LocaleSwitch />
           <ThemeSwitch />
         </div>
       </div>

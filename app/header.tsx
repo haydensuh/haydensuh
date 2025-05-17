@@ -4,7 +4,12 @@ import { useEffect, useState } from 'react'
 import { TextEffect } from '@/components/ui/text-effect'
 import Link from 'next/link'
 import { LogoutButton } from '@/components/ui/logout-button'
-export function Header() {
+
+type HeaderProps = {
+  locale: 'en' | 'ko'
+}
+
+export function Header({ locale }: HeaderProps) {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
 
   useEffect(() => {
@@ -26,8 +31,11 @@ export function Header() {
             height={24}
             className="rounded-full dark:bg-zinc-800"
           />
-          <Link href="/" className="font-medium text-black dark:text-white">
-            Hayden Suh
+          <Link
+            href={`/${locale}`}
+            className="font-medium text-black dark:text-white"
+          >
+            {locale === 'ko' ? '서현정 포트폴리오' : 'Hayden Suh'}
           </Link>
           {isAuthenticated && <LogoutButton />}
         </div>
