@@ -1,6 +1,7 @@
 import { LoginForm } from '@/app/[locale]/login/login-form'
 import type { Locale } from '@/lib/i18n-config'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function LoginPage({ params }: { params: any }) {
   const locale = params?.locale as Locale
 

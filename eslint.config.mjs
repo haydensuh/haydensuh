@@ -16,6 +16,12 @@ const eslintConfig = [
     'plugin:prettier/recommended',
     'plugin:mdx/recommended',
   ),
+  {
+    files: ['**/*.{ts,tsx,mdx}'],
+    rules: {
+      'react/no-unescaped-entities': 'off', // 따옴표 관련 에러 끄기
+    },
+  },
 ]
 
 export default eslintConfig
