@@ -1,29 +1,31 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useSearchParams } from 'next/navigation'
 import type { Locale } from '@/lib/i18n-config'
 
 export function LoginForm({ locale }: { locale: Locale }) {
   const [pass, setPass] = useState('')
-  const router = useRouter()
+  const [loading, setLoading] = useState(false)
   const searchParams = useSearchParams()
   const from = searchParams.get('from') || `/${locale}/works`
 
   const handleLogin = async () => {
+    setLoading(true)
+
     const res = await fetch('/api/login', {
       method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ pass }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
     })
 
     if (res.ok) {
-      router.refresh()
-      router.push(from)
+      setTimeout(() => {
+        window.location.replace(from)
+      }, 100)
     } else {
       alert(locale === 'ko' ? '비밀번호가 틀렸습니다.' : 'Wrong password')
+      setLoading(false)
     }
   }
 
@@ -40,13 +42,25 @@ export function LoginForm({ locale }: { locale: Locale }) {
           placeholder={locale === 'ko' ? '비밀번호' : 'Password'}
           value={pass}
           onChange={(e) => setPass(e.target.value)}
-          className="rounded border px-4 py-2"
+          disabled={loading}
+          className="rounded border px-4 py-2 text-center text-black disabled:opacity-50"
         />
         <button
           onClick={handleLogin}
-          className="rounded bg-black px-4 py-2 text-white dark:bg-white dark:text-black"
+          disabled={loading}
+          className={`rounded px-4 py-2 text-white transition-colors ${
+            loading
+              ? 'cursor-not-allowed bg-zinc-400'
+              : 'bg-black hover:bg-zinc-800 dark:bg-white dark:text-black'
+          }`}
         >
-          {locale === 'ko' ? '확인' : 'Enter'}
+          {loading
+            ? locale === 'ko'
+              ? '확인 중...'
+              : 'Unlocking...'
+            : locale === 'ko'
+              ? '확인'
+              : 'Enter'}
         </button>
       </div>
     </div>

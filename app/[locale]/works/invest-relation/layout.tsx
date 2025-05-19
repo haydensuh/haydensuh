@@ -1,6 +1,6 @@
 'use client'
 import { BackButton } from '@/components/ui/back-button'
-import { CopyButton } from '@/components/copy-button'
+import { CopyButton } from '@/components/ui/copy-button'
 
 export default function ProjectDetailLayout({
   children,

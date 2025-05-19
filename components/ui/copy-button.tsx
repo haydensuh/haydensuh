@@ -4,7 +4,6 @@ import { TextMorph } from '@/components/ui/text-morph'
 
 export function CopyButton() {
   const [text, setText] = useState('Copy')
-
   const handleCopy = () => {
     const currentUrl = window.location.href
     navigator.clipboard.writeText(currentUrl)
