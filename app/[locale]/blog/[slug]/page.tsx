@@ -1,11 +1,18 @@
+import React from 'react'
 import { notFound } from 'next/navigation'
 import { getPostBySlug } from '@/lib/posts'
+import type { Locale } from '@/lib/i18n-config'
+
+type Params = {
+  params: {
+    locale: Locale
+    slug: string
+  }
+}
 
 export default async function BlogPostPage({
   params,
-}: {
-  params: { locale: string; slug: string }
-}) {
+}: Params): Promise<React.ReactElement> {
   const { locale, slug } = params
   const post = await getPostBySlug(locale, slug)
 

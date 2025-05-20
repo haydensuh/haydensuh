@@ -8,7 +8,7 @@ export async function getPostBySlug(locale: string, slug: string) {
   const realSlug = slug.replace(/\.mdx$/, '')
   const fullPath = path.join(
     process.cwd(),
-    'content/posts',
+    'content/post',
     locale,
     `${realSlug}.mdx`,
   )

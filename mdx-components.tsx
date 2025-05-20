@@ -9,7 +9,7 @@ type FigureProps = {
 const Figure = ({ src, alt, caption }: FigureProps) => (
   <figure className="rounded-xl bg-zinc-50 dark:bg-zinc-900">
     <img src={src} alt={alt} className="rounded-xl" />
-    <figcaption className="mt-2 text-center text-sm text-zinc-500">
+    <figcaption className="${className} mt-2 text-center text-sm text-zinc-500">
       {caption}
     </figcaption>
   </figure>
