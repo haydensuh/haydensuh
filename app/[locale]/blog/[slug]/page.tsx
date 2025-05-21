@@ -1,27 +1,25 @@
-import React from 'react'
 import { notFound } from 'next/navigation'
-import { getPostBySlug } from '@/lib/posts'
-import type { Locale } from '@/lib/i18n-config'
+import { useMDXComponents } from '@/mdx-components'
 
-type Params = {
-  params: {
-    locale: Locale
-    slug: string
-  }
-}
-
-export default async function BlogPostPage({
+export default async function BlogPage({
   params,
-}: Params): Promise<React.ReactElement> {
+}: {
+  params: { locale: string; slug: string }
+}) {
   const { locale, slug } = params
-  const post = await getPostBySlug(locale, slug)
 
-  if (!post) return notFound()
+  try {
+    const { default: Post } = await import(
+      `@/content/blog/${slug}/${locale}.mdx`
+    )
+    const components = useMDXComponents({})
 
-  return (
-    <article className="prose">
-      <h1>{post.title}</h1>
-      <div>{post.content}</div>
-    </article>
-  )
+    return (
+      <article className="prose prose-neutral dark:prose-invert mx-auto max-w-3xl py-12">
+        <Post components={components} />
+      </article>
+    )
+  } catch {
+    return notFound()
+  }
 }
