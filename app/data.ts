@@ -255,7 +255,7 @@ export const BLOG_POSTS = {
     },
     {
       title: '만족도를 어떻게 정의할 것인가?',
-      description: 'ZUZU의 법인 설립 기능을 예로 본 조작적 정의',
+      description: 'ZUZU의 법인 설립 기능을 통해 본 조작적 정의',
       link: '/blog/zuzu-operational-definition',
       uid: 'zuzu-operational-definition',
     },
@@ -286,7 +286,7 @@ export const ALL_BLOG_POSTS = {
     },
     {
       title: '만족도를 어떻게 정의할 것인가?',
-      description: 'ZUZU의 법인 설립 기능을 예로 본 조작적 정의',
+      description: 'ZUZU의 법인 설립 기능을 통해 본 조작적 정의',
       link: '/blog/zuzu-operational-definition',
       uid: 'zuzu-operational-definition',
     },

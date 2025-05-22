@@ -3,7 +3,8 @@
 import { useMDXComponents } from '@/mdx-components'
 import { MDXComponents } from 'mdx/types'
 import { useEffect, useState } from 'react'
-
+import { BackButton } from '@/components/ui/back-button'
+import { CopyButton } from '@/components/ui/copy-button'
 export function ClientWrapper({
   locale,
   slug,
@@ -32,7 +33,13 @@ export function ClientWrapper({
   if (!Post) return <div>Loading...</div>
 
   return (
-    <article className="prose prose-neutral dark:prose-invert mx-auto max-w-3xl py-12">
+    <article className="prose prose-neutral dark:prose-invert py-12">
+      <div className="mb-8">
+        <BackButton />
+      </div>
+      <div className="absolute top-10 right-4">
+        <CopyButton />
+      </div>
       <Post components={components} />
     </article>
   )

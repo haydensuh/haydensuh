@@ -89,8 +89,9 @@ export default function ClientPage({ locale }: Props) {
         transition={{ duration: 0.3 }}
       >
         <p className="text-zinc-600 dark:text-zinc-400">
-          From complexity to clarity — I design to drive real impact with
-          empathy, clarity, and intent.
+          {locale === 'en'
+            ? 'From complexity to clarity — I design to drive real impact with empathy, clarity, and intent.'
+            : '복잡함을 명확함으로 — 공감과 명료함으로 의미 있는 임팩트를 만들어갑니다.'}
         </p>
       </motion.section>
 
@@ -106,9 +107,9 @@ export default function ClientPage({ locale }: Props) {
           <h3 className="text-lg font-medium">Selected Projects</h3>
           <Link
             href={`/${locale}/works`}
-            className="group flex items-center gap-1 text-sm text-zinc-500 dark:text-zinc-400"
+            className="group flex items-center text-sm text-zinc-500 dark:text-zinc-400"
           >
-            View all{' '}
+            {locale === 'en' ? 'View all' : '더보기'}
             <ArrowRightIcon
               size={14}
               className="transition-transform group-hover:translate-x-1"
@@ -238,9 +239,9 @@ export default function ClientPage({ locale }: Props) {
           <h3 className="text-lg font-medium">About</h3>
           <Link
             href={`/${locale}/about`}
-            className="group flex items-center gap-1 text-sm text-zinc-500 dark:text-zinc-400"
+            className="group flex items-center text-sm text-zinc-500 dark:text-zinc-400"
           >
-            Learn more
+            {locale === 'en' ? 'Learn more' : '더보기'}
             <ArrowRightIcon
               size={14}
               className="transition-transform duration-150 ease-in-out group-hover:translate-x-1"
@@ -248,9 +249,9 @@ export default function ClientPage({ locale }: Props) {
           </Link>
         </div>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          Driving intuitive and high-performance web experiences by aligning
-          design execution with business impact — bridging design and
-          development through frontend literacy and hands-on implementation.
+          {locale === 'en'
+            ? 'Driving intuitive and high-performance web experiences by aligning design execution with business impact — bridging design and development through frontend literacy and hands-on implementation.'
+            : '디자인 실행과 비즈니스 임팩트를 정렬하고, 프론트엔드 이해와 직접 구현을 통해 디자인과 개발 사이의 간극을 메웁니다 — 직관적이고 고성능의 웹 경험을 만듭니다.'}
         </p>
       </motion.section>
 

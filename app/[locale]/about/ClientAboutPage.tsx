@@ -330,18 +330,38 @@ export default function ClientAboutPage({ locale }: Props) {
         <h3 className="mb-2 text-lg font-medium">Hayden Suh</h3>
 
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          I currently work at{' '}
-          <a
-            href="https://zuzu.network"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center hover:text-zinc-500 dark:hover:text-zinc-400"
-          >
-            ZUZU
-            <LinkIcon />
-          </a>{' '}
-          as a Product Designer focused on improving end-to-end workflows for
-          corporate management.
+          {locale === 'en' ? (
+            <>
+              I currently work at{' '}
+              <a
+                href="https://zuzu.network"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center hover:text-zinc-500 dark:hover:text-zinc-400"
+              >
+                ZUZU
+                <LinkIcon />
+              </a>{' '}
+              as a Product Designer focused on improving end-to-end workflows
+              for corporate management.
+            </>
+          ) : (
+            <>
+              현재{' '}
+              <a
+                href="https://zuzu.network"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center hover:text-zinc-500 dark:hover:text-zinc-400"
+              >
+                ZUZU
+                <LinkIcon />
+              </a>{' '}
+              에서 Product Designer로 일하며, AI 기반 기능부터 주주 관리, 투자자
+              매칭 시스템까지 회사 운영 전반을 지원하는 다양한 기능의 사용자
+              경험을 설계하고 있습니다.
+            </>
+          )}
         </p>
 
         <div className="prose dark:prose-invert space-y-3">
