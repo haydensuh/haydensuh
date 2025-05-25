@@ -265,9 +265,7 @@ export default function ClientPage({ locale }: Props) {
       >
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          {locale === 'en'
-            ? 'Feel free to contact me at'
-            : '편하게 말 걸어주세요.'}{' '}
+          {locale === 'en' ? 'Feel free to contact me at' : ''}{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
             {EMAIL}
           </a>
