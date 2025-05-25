@@ -251,7 +251,7 @@ export default function ClientPage({ locale }: Props) {
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           {locale === 'en'
             ? 'Driving intuitive and high-performance web experiences by aligning design execution with business impact — bridging design and development through frontend literacy and hands-on implementation.'
-            : '디자인 실행과 비즈니스 임팩트를 정렬하고, 프론트엔드 이해와 직접 구현을 통해 디자인과 개발 사이의 간극을 메웁니다 — 직관적이고 고성능의 웹 경험을 만듭니다.'}
+            : '비즈니스 문제를 구조적으로 분석하고 사용자 중심의 설계를 통해 누구나 이해하고 쉽게 이용할 수 있는 흐름을 만드는 디자인을 합니다. 디자인은 단순한 화면 구성이 아니라 사람들이 더 나은 결정을 내릴 수 있도록 돕는 도구라고 믿습니다.'}
         </p>
       </motion.section>
 
@@ -265,7 +265,9 @@ export default function ClientPage({ locale }: Props) {
       >
         <h3 className="mb-5 text-lg font-medium">Connect</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-          Feel free to contact me at{' '}
+          {locale === 'en'
+            ? 'Feel free to contact me at'
+            : '편하게 말 걸어주세요.'}{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
             {EMAIL}
           </a>

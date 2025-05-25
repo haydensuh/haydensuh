@@ -217,47 +217,46 @@ const ABOUT_SECTIONS_BY_LOCALE: Record<Locale, AboutSectionData[]> = {
       title: '배경',
       content: (
         <p className="text-zinc-600 dark:text-zinc-400">
-          I began my career in visual communication design, but it didn't take
-          long before I was drawn to how people think, hesitate, and decide.
-          That curiosity led me into UX, where I've spent the past 6 years
-          designing structured, human-centered workflows in complex domains like
-          e-commerce, legal tech and startup financing. <br />I currently work
-          at ZUZU as a Product Designer, contributing to tools that support
-          company operations — from AI-assisted features to shareholder
-          management and investor matching systems. My role often blends product
-          strategy, UX, and system thinking, ensuring that messy real-world
-          scenarios translate into clear and reliable user flows.
+          시각 커뮤니케이션 디자인을 전공했고 첫 커리어는 그래픽 디자인에서
+          시작했습니다. 하지만 늘 사람의 행동과 생각을 관찰하는 일에 더
+          끌렸습니다. 그리고 왜 망설이고 어떻게 결정을 내리는지에 대한 궁금증은
+          자연스럽게 UX로 이어졌습니다. 이후 6년 동안 B2C 이커머스, B2B
+          이커머스, 리걸테크, 스타트업 주주 관리 등과 같은 복잡한 도메인에서도
+          사용자가 쉽게 이해하고 움직일 수 있는 흐름을 설계하기 위해
+          고민해왔습니다. <br />
+          지금은 ZUZU에서 일하며 AI 기능부터 주주 관리, 투자자 매칭 시스템까지
+          회사 운영을 돕는 여러 서비스와 기능들을 만들고 있습니다. 제품 전략부터
+          사용자 경험, 시스템적인 시야까지 복잡한 문제를 명확한 흐름으로 바꾸는
+          데 집중합니다.
         </p>
       ),
     },
     {
-      title: 'Design Philosophy',
+      title: '디자인 철학',
       content: (
         <>
           <p className="text-zinc-600 dark:text-zinc-400">
-            <span className="font-semibold">From complexity to clarity —</span>{' '}
-            that's the foundation of everything I design.
+            <span className="font-semibold">'복잡함에서 명확함으로'</span>
           </p>
           <ul className="list-disc pl-4 text-zinc-600 dark:text-zinc-400">
             <li>
-              I prioritize structured choices, contextual cues, and progressive
-              disclosure, so users can stay focused and informed without
-              cognitive fatigue.
+              사용자가 인지적 피로 없이 흐름을 따라갈 수 있도록 구조화된
+              선택지와 문맥에 맞는 안내, 단계적인 정보 제공을 우선합니다.
             </li>
             <li>
-              I believe great UX isn't just about visual polish. It's about
-              guiding users through complexity without overwhelming them.
+              좋은 UX는 단순히 예쁘게 만드는 게 아니라 복잡한 걸 자연스럽게
+              풀어주는 거라고 믿습니다.
             </li>
             <li>
-              I love working where business logic meets human behavior — mapping
-              out workflows, asking "What matters at this step?", and designing
-              tools that empower, not confuse.
+              저는 비즈니스 로직과 사람의 행동이 만나는 지점을 설계하는 일을
+              좋아합니다. '이 단계에서 가장 중요한 것은 무엇일까?'를 끊임없이
+              묻고 사용자를 혼란스럽게 하지 않는 도구를 만들고자 합니다.
             </li>
           </ul>
           <p className="text-zinc-600 dark:text-zinc-400">
-            At the heart of my work is empathy: the belief that on the other
-            side of every screen is a person with their own mental model, goals,
-            and constraints.
+            제 디자인의 중심에는 <span className="font-semibold">사람</span>이
+            있습니다. 화면 너머에는 각자의 사고방식과 목표, 제약을 가진 사용자가
+            있다고 믿고 그들의 맥락을 이해하며 설계하려 노력합니다.
           </p>
         </>
       ),
@@ -293,14 +292,16 @@ const ABOUT_SECTIONS_BY_LOCALE: Record<Locale, AboutSectionData[]> = {
     //   ),
     // },
     {
-      title: 'Outside work',
+      title: '업무 밖, 일상 속에서',
       content: (
         <p className="text-zinc-600 dark:text-zinc-400">
-          I find inspiration in quiet moments and new perspectives — through
-          books, thoughtful travel, and time spent observing the world. I love
-          ideas and details that make people say, "Oh, that makes sense."
+          저는 책을 읽거나 여행하면서 새로운 관점과 조용한 순간에서 영감을
+          얻습니다. 일상 속에서 사람과 시스템을 관찰하며 '이거 정말 잘
+          만들었다'는 생각이 드는 디테일에 관심이 많습니다.
           <br />
-          Also, proudly team pineapple on pizza.
+          그리고… <span className="font-semibold">파인애플 피자</span>와{' '}
+          <span className="font-semibold">카페라떼</span>는 제 디자인의
+          원천입니다. 🍍🍕☕️
         </p>
       ),
     },
@@ -327,12 +328,24 @@ export default function ClientAboutPage({ locale }: Props) {
           <BackButton />
         </div>
 
-        <h3 className="mb-2 text-lg font-medium">Hayden Suh</h3>
+        <h3 className="mb-2 text-lg font-medium">
+          {locale === 'en' ? 'Hayden Suh' : '서현정'}
+        </h3>
 
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           {locale === 'en' ? (
             <>
-              I currently work at{' '}
+              I’m a Product Designer at Kodebox , a subsidiary of{' '}
+              <a
+                href="https://www.dunamu.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center hover:text-zinc-500 dark:hover:text-zinc-400"
+              >
+                Dunamu
+                <LinkIcon />
+              </a>{' '}
+              . <br />I design user experiences for{' '}
               <a
                 href="https://zuzu.network"
                 target="_blank"
@@ -342,24 +355,36 @@ export default function ClientAboutPage({ locale }: Props) {
                 ZUZU
                 <LinkIcon />
               </a>{' '}
-              as a Product Designer focused on improving end-to-end workflows
-              for corporate management.
+              , a service that supports startups across the entire company
+              lifecycle — from incorporation and operations to investor matching
+              and AI-assisted workflows. My focus is on making complex legal and
+              operational processes more approachable and intuitive.
             </>
           ) : (
             <>
               현재{' '}
               <a
+                href="https://www.dunamu.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center hover:text-zinc-500 dark:hover:text-zinc-400"
+              >
+                두나무
+                <LinkIcon />
+              </a>{' '}
+              의 자회사인 Kodebox에서 프로덕트 디자이너로 일하며 법인 설립, 법인
+              운영부터 투자자 매칭 시스템, AI 기반 기능까지 회사 운영 전반을
+              지원하는{' '}
+              <a
                 href="https://zuzu.network"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center hover:text-zinc-500 dark:hover:text-zinc-400"
               >
-                ZUZU
-                <LinkIcon />
+                ZUZU <LinkIcon />
               </a>{' '}
-              에서 Product Designer로 일하며, AI 기반 기능부터 주주 관리, 투자자
-              매칭 시스템까지 회사 운영 전반을 지원하는 다양한 기능의 사용자
-              경험을 설계하고 있습니다.
+              의 사용자 경험을 설계하고 있습니다. 스타트업이 회사를 설립하고
+              운영하면서 겪는 복잡한 절차들을 쉽게 만들기 위해 돕고 있습니다.
             </>
           )}
         </p>
