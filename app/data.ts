@@ -245,6 +245,13 @@ export const BLOG_POSTS = {
       link: '/blog/zuzu-operational-definition',
       uid: 'zuzu-operational-definition',
     },
+    {
+      title: 'Making Shareholder Agreements Simple, Not Simplistic',
+      description:
+        'What I Learned While Designing the Shareholder Agreement Builder',
+      link: '/blog/shareholder-contract-experience',
+      uid: 'shareholder-contract-experience',
+    },
   ],
   ko: [
     {
