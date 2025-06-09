@@ -217,7 +217,7 @@ const ABOUT_SECTIONS_BY_LOCALE: Record<Locale, AboutSectionData[]> = {
       title: '배경',
       content: (
         <p className="text-zinc-600 dark:text-zinc-400">
-          시각 커뮤니케이션 디자인을 전공했고 첫 커리어는 그래픽 디자인에서
+          시각 커뮤니케이션 디자인을 전공했고 첫 커리어는 그래픽 디자인으로
           시작했습니다. 하지만 늘 사람의 행동과 생각을 관찰하는 일에 더
           끌렸습니다. 그리고 왜 망설이고 어떻게 결정을 내리는지에 대한 궁금증은
           자연스럽게 UX로 이어졌습니다. 이후 6년 동안 B2C 이커머스, B2B
@@ -384,7 +384,8 @@ export default function ClientAboutPage({ locale }: Props) {
                 ZUZU <LinkIcon />
               </a>{' '}
               의 사용자 경험을 설계하고 있습니다. 스타트업이 회사를 설립하고
-              운영하면서 겪는 복잡한 절차들을 쉽게 만들기 위해 돕고 있습니다.
+              운영하면서 겪는 복잡한 절차들을 쉽게 진행할 수 있도록 돕고
+              있습니다.
             </>
           )}
         </p>
