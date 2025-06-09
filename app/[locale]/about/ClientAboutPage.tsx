@@ -384,8 +384,8 @@ export default function ClientAboutPage({ locale }: Props) {
                 ZUZU <LinkIcon />
               </a>{' '}
               의 사용자 경험을 설계하고 있습니다. 스타트업이 회사를 설립하고
-              운영하면서 겪는 복잡한 절차들을 쉽게 진행할 수 있도록 돕고
-              있습니다.
+              운영하면서 겪는 복잡한 절차들을 더 빠르고 간편하게 해결할 수
+              있도록 돕습니다.
             </>
           )}
         </p>
