@@ -91,7 +91,7 @@ export default function ClientPage({ locale }: Props) {
         <p className="text-zinc-600 dark:text-zinc-400">
           {locale === 'en'
             ? 'From complexity to clarity — I design to drive real impact with empathy, clarity, and intent.'
-            : '복잡함을 명확함으로 — 공감과 명료함으로 의미 있는 임팩트를 만들어갑니다.'}
+            : '복잡함을 명확함으로 — 비즈니스와 유저 밸런스를 갖춘 의미 있는 임팩트를 만들어갑니다.'}
         </p>
       </motion.section>
 
