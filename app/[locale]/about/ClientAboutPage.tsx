@@ -300,8 +300,8 @@ const ABOUT_SECTIONS_BY_LOCALE: Record<Locale, AboutSectionData[]> = {
           만들었다'는 생각이 드는 디테일에 관심이 많습니다.
           <br />
           그리고… <span className="font-semibold">파인애플 피자</span>와{' '}
-          <span className="font-semibold">카페라떼</span>는 제 디자인의
-          원천입니다. 🍍🍕☕️
+          <span className="font-semibold">카페라떼</span>는 디자인의 원천입니다.
+          🍍🍕☕️
         </p>
       ),
     },
