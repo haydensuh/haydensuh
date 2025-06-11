@@ -122,24 +122,26 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
       id: 'company-registration',
     },
     {
-      name: '회의 알림 기능 개선',
-      description: '커스텀 아젠다 콘텐츠 도입',
+      name: '소집통지 메일 커스텀',
+      description: '소집통지서 내 안건 내용을 추가 및 삭제 가능하도록',
       link: '/works/meeting-notice-agenda-details-edit',
       image:
         'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321251_piuaqp.png',
       id: 'meeting-notice-agenda-details-edit',
     },
     {
-      name: '이해관계자 통합관리 시스템',
+      name: '법인 설립 리브랜딩 및 사용성 개선',
+      description: '법인 설립 사이트 분리 및 정보 입력 페이지 개선',
+      link: '/works/incorporation-redesign',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321253_vsqk4g.png',
+      id: 'incorporation-redesign',
+    },
+    {
+      name: '이해관계자 통합 관리 시스템',
       description: '통합 이해관계자 관리 시스템 설계',
       link: '/works/stakeholder-management',
       id: 'stakeholder-management',
-    },
-    {
-      name: 'AI 기반 목적 추천',
-      description: '회사 설명 기반 목적 자동 추천',
-      link: '/works/business-purpose-ai-recommendation',
-      id: 'business-purpose-ai-recommendation',
     },
   ],
 }
