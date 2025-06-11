@@ -142,8 +142,7 @@ const ABOUT_SECTIONS_BY_LOCALE: Record<Locale, AboutSectionData[]> = {
       content: (
         <>
           <p className="text-zinc-600 dark:text-zinc-400">
-            <span className="font-semibold">From complexity to clarity —</span>{' '}
-            that's the foundation of everything I design.
+            <span className="font-semibold">From complexity to clarity</span>
           </p>
           <ul className="list-disc pl-4 text-zinc-600 dark:text-zinc-400">
             <li>
@@ -169,36 +168,42 @@ const ABOUT_SECTIONS_BY_LOCALE: Record<Locale, AboutSectionData[]> = {
         </>
       ),
     },
-    // {
-    //   title: 'Now & Next',
-    //   content: (
-    //     <>
-    //       <p className="text-zinc-600 dark:text-zinc-400">
-    //         Right now, I'm focused on:
-    //       </p>
-    //       <ul className="list-disc pl-4 text-zinc-600 dark:text-zinc-400">
-    //         <li>Building modular form systems for legal contracts and filings</li>
-    //         <li>
-    //           Supporting users with varying levels of legal and digital literacy
-    //         </li>
-    //         <li>
-    //           Designing AI-assisted workflows that feel natural and transparent
-    //         </li>
-    //         <li>
-    //           Bridging design and development through hands-on frontend
-    //           implementation
-    //         </li>
-    //       </ul>
-    //       <p className="text-zinc-600 dark:text-zinc-400">
-    //         Looking ahead, I'm exploring{' '}
-    //         <span className="font-bold">HCI research</span> and inclusive design
-    //         at scale. <br />I believe that truly impactful products are not just
-    //         functional — they're understandable, accessible, and empowering for
-    //         all.
-    //       </p>
-    //     </>
-    //   ),
-    // },
+    {
+      title: 'What Drives Me',
+      content: (
+        <ul className="list-disc space-y-2 pl-4 text-zinc-600 dark:text-zinc-400">
+          <li>
+            <span className="font-semibold">Curiosity to Explore:</span> I find
+            energy in trying things out, observing patterns, and meeting the
+            unfamiliar — even when it doesn’t seem immediately useful. If an
+            idea isn’t harmful, I’d rather try it first.
+          </li>
+          <li>
+            <span className="font-semibold">Power of Questions:</span> I make a
+            habit of holding onto questions and searching for the gaps in how
+            things work. I’m especially interested in uncovering assumptions —
+            the things we think we know, but don’t.
+          </li>
+          <li>
+            <span className="font-semibold">Emotional Insight:</span> I believe
+            that the ability to sense and express emotion plays a powerful role
+            in design — it's often what turns interaction into connection.
+          </li>
+          <li>
+            <span className="font-semibold">Thoughtful Judgment:</span> I value
+            time spent thinking over chasing quick wins. Even when a process
+            seems inefficient, I believe that struggle often leads to growth and
+            better decisions.
+          </li>
+          <li>
+            <span className="font-semibold">Adaptability:</span> Change is
+            inevitable, so I don’t hesitate to let go of what's familiar and
+            adjust myself to new environments. I enjoy embracing the unfamiliar
+            and trying new things.
+          </li>
+        </ul>
+      ),
+    },
     {
       title: 'Outside work',
       content: (
@@ -261,36 +266,38 @@ const ABOUT_SECTIONS_BY_LOCALE: Record<Locale, AboutSectionData[]> = {
         </>
       ),
     },
-    // {
-    //   title: 'Now & Next',
-    //   content: (
-    //     <>
-    //       <p className="text-zinc-600 dark:text-zinc-400">
-    //         Right now, I'm focused on:
-    //       </p>
-    //       <ul className="list-disc pl-4 text-zinc-600 dark:text-zinc-400">
-    //         <li>Building modular form systems for legal contracts and filings</li>
-    //         <li>
-    //           Supporting users with varying levels of legal and digital literacy
-    //         </li>
-    //         <li>
-    //           Designing AI-assisted workflows that feel natural and transparent
-    //         </li>
-    //         <li>
-    //           Bridging design and development through hands-on frontend
-    //           implementation
-    //         </li>
-    //       </ul>
-    //       <p className="text-zinc-600 dark:text-zinc-400">
-    //         Looking ahead, I'm exploring{' '}
-    //         <span className="font-bold">HCI research</span> and inclusive design
-    //         at scale. <br />I believe that truly impactful products are not just
-    //         functional — they're understandable, accessible, and empowering for
-    //         all.
-    //       </p>
-    //     </>
-    //   ),
-    // },
+    {
+      title: '나를 움직이는 힘',
+      content: (
+        <ul className="list-disc space-y-2 pl-4 text-zinc-600 dark:text-zinc-400">
+          <li>
+            <span className="font-semibold">탐험력:</span> 당장 쓸모가 없어
+            보여도 자꾸 시도하고 관찰하며, 새로운 것을 만나는 데서 힘을
+            얻습니다. 이상한 아이디어라도 나쁜 것이 아니라면 일단 해보려 합니다.
+          </li>
+          <li>
+            <span className="font-semibold">질문력:</span> 마음속의 질문을
+            놓치지 않고 문제의 빈틈을 찾아내는 데 집중합니다. 특히 사업 모델이나
+            사용자 여정에서 '모르는데 알고 있다고 착각하는 것'을 밝혀내는 데
+            관심이 많습니다.
+          </li>
+          <li>
+            <span className="font-semibold">교감력:</span> 감정을 섬세하게
+            전달하거나 읽어내는 힘이 디자인에 중요한 연결고리가 된다고 믿습니다.
+          </li>
+          <li>
+            <span className="font-semibold">판단력:</span> 성과보다 사고하는
+            시간을 더 중요하게 여깁니다. 비효율적으로 보이더라도 직접 고민해보는
+            과정을 통해 성숙해지는 것을 믿습니다.
+          </li>
+          <li>
+            <span className="font-semibold">적응력:</span> 변화는 피할 수 없기에
+            익숙한 것을 내려놓고 새로운 환경에 나를 맞추는 데 주저하지 않습니다.
+            새로운 것을 받아들이고 시도하는 것을 좋아합니다.
+          </li>
+        </ul>
+      ),
+    },
     {
       title: '업무 밖, 일상 속에서',
       content: (
