@@ -20,8 +20,8 @@ export function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
-  // 3. 인증 필요한 /[locale]/works, /[locale]/works/* 경로 차단
-  const isProtectedWorks = /^\/(en|ko)(\/works|\/works\/.*)$/.test(pathname)
+  // 3. 인증 필요한 /[locale]/works/* 경로만 차단 (works 메인 페이지는 제외)
+  const isProtectedWorks = /^\/(en|ko)\/works\/.+$/.test(pathname)
   if (isProtectedWorks && token !== 'valid') {
     const locale = pathname.startsWith('/ko') ? 'ko' : 'en'
     const loginUrl = new URL(`/${locale}/login`, request.url)
