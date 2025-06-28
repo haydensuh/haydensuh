@@ -271,9 +271,9 @@ const ABOUT_SECTIONS_BY_LOCALE: Record<Locale, AboutSectionData[]> = {
       content: (
         <ul className="list-disc space-y-2 pl-4 text-zinc-600 dark:text-zinc-400">
           <li>
-            <span className="font-semibold">탐험력:</span> 당장 쓸모가 없어
-            보여도 자꾸 시도하고 관찰하며, 새로운 것을 만나는 데서 힘을
-            얻습니다. 이상한 아이디어라도 나쁜 것이 아니라면 일단 해보려 합니다.
+            <span className="font-semibold">탐험력:</span>시도하고 관찰하며
+            새로운 것을 만나는 데서 힘을 얻습니다. 당장 쓸모가 없어보이더라도
+            나쁜 것이 아니라면 일단 해보려 합니다.
           </li>
           <li>
             <span className="font-semibold">질문력:</span> 마음속의 질문을
