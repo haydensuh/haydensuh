@@ -241,19 +241,19 @@ export const BLOG_POSTS = {
       link: '/blog/post-chat-ui',
       uid: 'post-chat-ui',
     },
-    {
-      title: 'How Do We Define Satisfaction?',
-      description: 'Defining satisfaction through operational definition',
-      link: '/blog/zuzu-operational-definition',
-      uid: 'zuzu-operational-definition',
-    },
-    {
-      title: 'Making Shareholder Agreements Simple, Not Simplistic',
-      description:
-        'What I Learned While Designing the Shareholder Agreement Builder',
-      link: '/blog/shareholder-contract-experience',
-      uid: 'shareholder-contract-experience',
-    },
+    // {
+    //   title: 'How Do We Define Satisfaction?',
+    //   description: 'Defining satisfaction through operational definition',
+    //   link: '/blog/zuzu-operational-definition',
+    //   uid: 'zuzu-operational-definition',
+    // },
+    // {
+    //   title: 'Making Shareholder Agreements Simple, Not Simplistic',
+    //   description:
+    //     'What I Learned While Designing the Shareholder Agreement Builder',
+    //   link: '/blog/shareholder-contract-experience',
+    //   uid: 'shareholder-contract-experience',
+    // },
   ],
   ko: [
     {
@@ -262,18 +262,18 @@ export const BLOG_POSTS = {
       link: '/blog/post-chat-ui',
       uid: 'post-chat-ui',
     },
-    {
-      title: '만족도를 어떻게 정의할 것인가?',
-      description: 'ZUZU의 법인 설립 기능을 통해 본 조작적 정의',
-      link: '/blog/zuzu-operational-definition',
-      uid: 'zuzu-operational-definition',
-    },
-    {
-      title: '계약은 복잡하지만 작성은 간결하게',
-      description: '주주간계약서 작성 기능을 설계하며 배운 것들',
-      link: '/blog/shareholder-contract-experience',
-      uid: 'shareholder-contract-experience',
-    },
+    // {
+    //   title: '만족도를 어떻게 정의할 것인가?',
+    //   description: 'ZUZU의 법인 설립 기능을 통해 본 조작적 정의',
+    //   link: '/blog/zuzu-operational-definition',
+    //   uid: 'zuzu-operational-definition',
+    // },
+    // {
+    //   title: '계약은 복잡하지만 작성은 간결하게',
+    //   description: '주주간계약서 작성 기능을 설계하며 배운 것들',
+    //   link: '/blog/shareholder-contract-experience',
+    //   uid: 'shareholder-contract-experience',
+    // },
   ],
 }
 
