@@ -66,15 +66,6 @@ export const PROJECTS: Record<Locale, Project[]> = {
 export const ALL_WORKS: Record<Locale, AllWorks[]> = {
   en: [
     {
-      name: 'Enhancing Investor Engagement Services',
-      description:
-        'Designed a broker (referrer) system based on existing investors',
-      link: '/works/invest-relation',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
-      id: 'invest-relation',
-    },
-    {
       name: 'Streamlining Company Registration Flow',
       description: 'Enabling immediate onboarding without waiting',
       link: '/works/company-registration',
@@ -89,6 +80,15 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
       image:
         'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321251_piuaqp.png',
       id: 'meeting-notice-agenda-details-edit',
+    },
+    {
+      name: 'Enhancing Investor Engagement Services',
+      description:
+        'Designed a broker (referrer) system based on existing investors',
+      link: '/works/invest-relation',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
+      id: 'invest-relation',
     },
     {
       name: 'Integrated Stakeholder Management',
@@ -106,14 +106,6 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
   ],
   ko: [
     {
-      name: '투자자 매칭 서비스 고도화',
-      description: '기존 투자자 기반 추천인 기능 도입',
-      link: '/works/invest-relation',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
-      id: 'invest-relation',
-    },
-    {
       name: '회사 등록 플로우 간소화',
       description: '기다리지 않고 바로 온보딩할 수 있도록',
       link: '/works/company-registration',
@@ -128,6 +120,14 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
       image:
         'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321253_vsqk4g.png',
       id: 'incorporation-redesign',
+    },
+    {
+      name: '투자자 매칭 서비스 고도화',
+      description: '기존 투자자 기반 추천인 기능 도입',
+      link: '/works/invest-relation',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
+      id: 'invest-relation',
     },
     {
       name: '소집통지 메일 커스텀',
@@ -285,12 +285,12 @@ export const ALL_BLOG_POSTS = {
       link: '/blog/post-chat-ui',
       uid: 'post-chat-ui',
     },
-    {
-      title: 'How Do We Define Satisfaction?',
-      description: 'Defining satisfaction through operational definition',
-      link: '/blog/zuzu-operational-definition',
-      uid: 'zuzu-operational-definition',
-    },
+    // {
+    //   title: 'How Do We Define Satisfaction?',
+    //   description: 'Defining satisfaction through operational definition',
+    //   link: '/blog/zuzu-operational-definition',
+    //   uid: 'zuzu-operational-definition',
+    // },
   ],
   ko: [
     {
@@ -299,12 +299,12 @@ export const ALL_BLOG_POSTS = {
       link: '/blog/post-chat-ui',
       uid: 'post-chat-ui',
     },
-    {
-      title: '만족도를 어떻게 정의할 것인가?',
-      description: 'ZUZU의 법인 설립 기능을 통해 본 조작적 정의',
-      link: '/blog/zuzu-operational-definition',
-      uid: 'zuzu-operational-definition',
-    },
+    // {
+    //   title: '만족도를 어떻게 정의할 것인가?',
+    //   description: 'ZUZU의 법인 설립 기능을 통해 본 조작적 정의',
+    //   link: '/blog/zuzu-operational-definition',
+    //   uid: 'zuzu-operational-definition',
+    // },
   ],
 }
 export const SOCIAL_LINKS: SocialLink[] = [
