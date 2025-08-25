@@ -30,15 +30,15 @@ export const PROJECTS: Record<Locale, Project[]> = {
       description: 'A seamless and legally secure unlisted stock trading service',
       link: '/works/unlisted-safe-trade',
       image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321334_ddfwfc.png',
-      id: 'unlisted-safe-trade'
+      id: 'unlisted-safe-trade',
     },
     {
       name: 'Incorporation Support Center for Tax Firms',
       description: 'One-stop flow from business registration to monthly bookkeeping',
       link: '/works/incorporation-center',
       image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
-      id: 'incorporation-center'
-    }
+      id: 'incorporation-center',
+    },
   ],
   ko: [
     {
@@ -46,15 +46,15 @@ export const PROJECTS: Record<Locale, Project[]> = {
       description: '편리함과 법적 안전성을 갖춘 비상장 주식 거래 서비스',
       link: '/works/unlisted-safe-trade',
       image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321334_ddfwfc.png',
-      id: 'unlisted-safe-trade'
+      id: 'unlisted-safe-trade',
     },
     {
       name: '세무펌 전용 법인설립지원센터',
       description: '설립부터 기장까지 원스톱으로 연결',
       link: '/works/incorporation-center',
       image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
-      id: 'incorporation-center'
-    }
+      id: 'incorporation-center',
+    },
   ],
 }
 
@@ -92,7 +92,7 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
       description: 'Automatically suggesting business purposes based on company descriptions',
       link: '/works/business-purpose-ai-recommendation',
       id: 'business-purpose-ai-recommendation',
-    }
+    },
   ],
   ko: [
     {
@@ -128,7 +128,7 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
       description: '통합 이해관계자 관리 시스템 설계',
       link: '/works/stakeholder-management',
       id: 'stakeholder-management',
-    }
+    },
   ],
 }
 
