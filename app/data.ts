@@ -29,36 +29,32 @@ export const PROJECTS: Record<Locale, Project[]> = {
       name: 'Trusted Unlisted Stock Trading',
       description: 'A seamless and legally secure unlisted stock trading service',
       link: '/works/unlisted-safe-trade',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321334_ddfwfc.png',
-      id: 'unlisted-safe-trade',
+      image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321334_ddfwfc.png',
+      id: 'unlisted-safe-trade'
     },
     {
       name: 'Incorporation Support Center for Tax Firms',
       description: 'One-stop flow from business registration to monthly bookkeeping',
       link: '/works/incorporation-center',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
-      id: 'incorporation-center',
-    },
+      image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
+      id: 'incorporation-center'
+    }
   ],
   ko: [
     {
       name: '비상장주식 안전거래 서비스 with 증권플러스',
       description: '편리함과 법적 안전성을 갖춘 비상장 주식 거래 서비스',
       link: '/works/unlisted-safe-trade',
-      image:
-      'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321334_ddfwfc.png',
-      id: 'unlisted-safe-trade',
+      image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321334_ddfwfc.png',
+      id: 'unlisted-safe-trade'
     },
     {
       name: '세무펌 전용 법인설립지원센터',
       description: '설립부터 기장까지 원스톱으로 연결',
       link: '/works/incorporation-center',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
-      id: 'incorporation-center',
-    },
+      image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
+      id: 'incorporation-center'
+    }
   ],
 }
 
@@ -68,25 +64,21 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
       name: 'Streamlining Company Registration Flow',
       description: 'Enabling immediate onboarding without waiting',
       link: '/works/company-registration',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
+      image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
       id: 'company-registration',
     },
     {
       name: 'Improving Meeting Notice Functionality',
       description: 'Introducing customizable agenda content',
       link: '/works/meeting-notice-agenda-details-edit',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321251_piuaqp.png',
+      image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321251_piuaqp.png',
       id: 'meeting-notice-agenda-details-edit',
     },
     {
       name: 'Enhancing Investor Engagement Services',
-      description:
-        'Designed a broker (referrer) system based on existing investors',
+      description: 'Designed a broker (referrer) system based on existing investors',
       link: '/works/invest-relation',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
+      image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
       id: 'invest-relation',
     },
     {
@@ -97,43 +89,38 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
     },
     {
       name: 'AI-Powered Business Purpose Recommendation',
-      description:
-        'Automatically suggesting business purposes based on company descriptions',
+      description: 'Automatically suggesting business purposes based on company descriptions',
       link: '/works/business-purpose-ai-recommendation',
       id: 'business-purpose-ai-recommendation',
-    },
+    }
   ],
   ko: [
     {
       name: '회사 등록 플로우 간소화',
       description: '기다리지 않고 바로 온보딩할 수 있도록',
       link: '/works/company-registration',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
+      image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
       id: 'company-registration',
     },
     {
       name: '법인 설립 리브랜딩 및 사용성 개선',
       description: '법인 설립 사이트 분리 및 정보 입력 페이지 개선',
       link: '/works/incorporation-redesign',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321253_vsqk4g.png',
+      image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321253_vsqk4g.png',
       id: 'incorporation-redesign',
     },
     {
       name: '투자자 매칭 서비스 고도화',
       description: '기존 투자자 기반 추천인 기능 도입',
       link: '/works/invest-relation',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
+      image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
       id: 'invest-relation',
     },
     {
       name: '소집통지 메일 커스텀',
       description: '소집통지서 내 안건 내용을 추가 및 삭제 가능하도록',
       link: '/works/meeting-notice-agenda-details-edit',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321251_piuaqp.png',
+      image: 'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321251_piuaqp.png',
       id: 'meeting-notice-agenda-details-edit',
     },
     {
@@ -141,7 +128,7 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
       description: '통합 이해관계자 관리 시스템 설계',
       link: '/works/stakeholder-management',
       id: 'stakeholder-management',
-    },
+    }
   ],
 }
 
@@ -248,8 +235,7 @@ export const BLOG_POSTS = {
     },
     {
       title: 'Making Shareholder Agreements Simple, Not Simplistic',
-      description:
-        'What I Learned While Designing the Shareholder Agreement Builder',
+      description: 'What I Learned While Designing the Shareholder Agreement Builder',
       link: '/blog/shareholder-contract-experience',
       uid: 'shareholder-contract-experience',
     },
