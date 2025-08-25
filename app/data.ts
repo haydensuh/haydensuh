@@ -26,39 +26,38 @@ type SocialLink = {
 export const PROJECTS: Record<Locale, Project[]> = {
   en: [
     {
-      name: 'Enhancing Investor Engagement Services',
-      description:
-        'Designed a broker (referrer) system based on existing investors',
-      link: '/works/invest-relation',
+      name: 'Trusted Unlisted Stock Trading',
+      description: 'A seamless and legally secure unlisted stock trading service',
+      link: '/works/unlisted-safe-trade',
       image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
-      id: 'invest-relation',
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321334_ddfwfc.png',
+      id: 'unlisted-safe-trade',
     },
     {
-      name: 'Streamlining Company Registration Flow',
-      description: 'Enabling immediate onboarding without waiting',
-      link: '/works/company-registration',
+      name: 'Incorporation Support Center for Tax Firms',
+      description: 'One-stop flow from business registration to monthly bookkeeping',
+      link: '/works/incorporation-center',
       image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
-      id: 'company-registration',
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
+      id: 'incorporation-center',
     },
   ],
   ko: [
     {
-      name: '투자자 매칭 서비스 고도화',
-      description: '기투자자 기반 추천인 기능 도입',
-      link: '/works/invest-relation',
+      name: '비상장주식 안전거래 서비스 with 증권플러스',
+      description: '편리함과 법적 안전성을 갖춘 비상장 주식 거래 서비스',
+      link: '/works/unlisted-safe-trade',
       image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
-      id: 'invest-relation',
+      'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321334_ddfwfc.png',
+      id: 'unlisted-safe-trade',
     },
     {
-      name: '회사 등록 플로우 간소화',
-      description: '기다리지 않고 바로 온보딩할 수 있도록',
-      link: '/works/company-registration',
+      name: '세무펌 전용 법인설립지원센터',
+      description: '설립부터 기장까지 원스톱으로 연결',
+      link: '/works/incorporation-center',
       image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
-      id: 'company-registration',
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
+      id: 'incorporation-center',
     },
   ],
 }
