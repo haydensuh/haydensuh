@@ -98,16 +98,16 @@ export default function ClientWorksPage({ locale }: Props) {
                   href={`/${locale}${project.link}`}
                   className="group block"
                 >
-                  <div className="relative rounded-2xl bg-zinc-50 ring-1 ring-zinc-200/50 transition-all ring-inset group-hover:scale-[1.01] dark:bg-zinc-900 dark:ring-zinc-800/50">
+                  <div className="relative rounded-2xl bg-zinc-50 outline outline-1 outline-zinc-200 transition-all ring-inset group-hover:scale-[1.01] dark:bg-zinc-900 dark:outline-zinc-800">
                     {project.image ? (
                       <img
                         src={project.image}
                         alt={project.name}
-                        className="block aspect-video w-full rounded-xl object-cover"
+                        className="block aspect-video w-full rounded-2xl object-cover"
                         style={{ pointerEvents: 'auto' }}
                       />
                     ) : (
-                      <div className="flex aspect-video w-full items-center justify-center rounded-xl text-zinc-500 dark:text-zinc-400">
+                      <div className="flex aspect-video w-full items-center justify-center rounded-2xl text-zinc-500 dark:text-zinc-400">
                         Coming soon...
                       </div>
                     )}

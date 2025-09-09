@@ -54,12 +54,12 @@ export const PROJECTS: Record<Locale, Project[]> = {
       id: 'unlisted-safe-trade',
     },
     {
-      name: '세무펌 전용 법인설립지원센터',
-      description: '설립부터 기장까지 원스톱으로 연결',
-      link: '/works/incorporation-center',
+      name: '주주간계약서 작성 기능',
+      description: '낯설고 어려운 계약서 작성을 누구나 쉽게',
+      link: '/works/shareholder-agreement',
       image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321335_xjn4pn.png',
-      id: 'incorporation-center',
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/shareholder_agreement_f4bqqj.png',
+      id: 'shareholder-agreement',
     },
   ],
 }
@@ -133,7 +133,15 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
       id: 'unlisted-safe-trade',
     },
     {
-      name: '세무펌 전용 법인설립지원센터',
+      name: '주주간계약서 작성 기능',
+      description: '낯설고 어려운 계약서 작성을 누구나 쉽게',
+      link: '/works/shareholder-agreement',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/shareholder_agreement_f4bqqj.png',
+      id: 'shareholder-agreement',
+    },
+    {
+      name: '법인설립지원센터(세무펌 전용 CRM)',
       description: '설립부터 기장까지 원스톱으로 연결',
       link: '/works/incorporation-center',
       image:

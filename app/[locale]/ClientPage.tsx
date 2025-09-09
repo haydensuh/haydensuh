@@ -130,7 +130,7 @@ export default function ClientPage({ locale }: Props) {
                     <img
                       src={project.image}
                       alt={project.name}
-                      className="block aspect-video w-full rounded-xl object-cover"
+                      className="block aspect-video w-full rounded-2xl object-cover"
                       style={{ pointerEvents: 'auto' }}
                     />
                   </div>
