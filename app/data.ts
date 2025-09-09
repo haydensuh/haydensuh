@@ -319,7 +319,7 @@ export const BLOG_POSTS = {
       uid: 'zuzu-operational-definition',
     },
     {
-      title: '계약은 복잡하지만 작성은 간결하게',
+      title: '낯설고 어려운 주주간계약서 작성을 누구나 쉽게',
       description: '주주간계약서 작성 기능을 설계하며 배운 것들',
       link: '/blog/shareholder-contract-experience',
       uid: 'shareholder-contract-experience',
