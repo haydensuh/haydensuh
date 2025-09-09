@@ -307,7 +307,7 @@ export const BLOG_POSTS = {
   ],
   ko: [
     {
-      title: '추천은 출력이 아니다',
+      title: 'AI 인터페이스 재설계 | 행동 가능한 UX 만들기',
       description: '사업목적 추천 기능을 설계하며 다시 생각한 AI 인터페이스',
       link: '/blog/post-chat-ui',
       uid: 'post-chat-ui',
