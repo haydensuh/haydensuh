@@ -43,7 +43,7 @@ export function LoginForm({ locale }: { locale: Locale }) {
           value={pass}
           onChange={(e) => setPass(e.target.value)}
           disabled={loading}
-          className="rounded border px-4 py-2 text-center text-black disabled:opacity-50"
+          className="rounded border px-4 py-2 text-center text-black disabled:opacity-50 dark:text-white"
         />
         <button
           onClick={handleLogin}

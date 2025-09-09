@@ -35,13 +35,12 @@ export const PROJECTS: Record<Locale, Project[]> = {
       id: 'unlisted-safe-trade',
     },
     {
-      name: 'Incorporation Support Center for Tax Firms',
-      description:
-        'One-stop flow from business registration to monthly bookkeeping',
-      link: '/works/incorporation-center',
+      name: 'Shareholders’ Agreement Drafting Tool',
+      description: 'Making complex contracts simple for everyone',
+      link: '/works/shareholder-agreement',
       image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321335_xjn4pn.png',
-      id: 'incorporation-center',
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/shareholder_agreement_f4bqqj.png',
+      id: 'shareholder-agreement',
     },
   ],
   ko: [
@@ -74,6 +73,14 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
       image:
         'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321334_ddfwfc.png',
       id: 'unlisted-safe-trade',
+    },
+    {
+      name: 'Shareholders’ Agreement Drafting Tool',
+      description: 'Making complex contracts simple for everyone',
+      link: '/works/shareholder-agreement',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/shareholder_agreement_f4bqqj.png',
+      id: 'shareholder-agreement',
     },
     {
       name: 'Incorporation Support Center for Tax Firms',
