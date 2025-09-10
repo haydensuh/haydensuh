@@ -92,12 +92,12 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
       id: 'incorporation-center',
     },
     {
-      name: 'Streamlining Company Registration Flow',
-      description: 'Enabling immediate onboarding without waiting',
-      link: '/works/company-registration',
+      name: 'ZUZU Onboarding Optimization',
+      description: 'Survey-Based Routing Design and Flow Simplification',
+      link: '/works/onboarding-optimization',
       image:
         'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
-      id: 'company-registration',
+      id: 'onboarding-optimization',
     },
     {
       name: 'Improving Meeting Notice Functionality',
@@ -156,8 +156,8 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
       id: 'incorporation-center',
     },
     {
-      name: '회사 등록 플로우 간소화',
-      description: '기다리지 않고 바로 온보딩할 수 있도록',
+      name: 'ZUZU 온보딩 최적화',
+      description: '가입 설문 기반 라우팅 설계 및 플로우 단축',
       link: '/works/company-registration',
       image:
         'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
