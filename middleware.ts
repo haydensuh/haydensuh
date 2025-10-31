@@ -3,6 +3,8 @@ import type { NextRequest } from 'next/server'
 
 const SUPPORTED_LOCALES = ['en', 'ko']
 const DEFAULT_LOCALE = 'en'
+// Temporary: disable auth gating for works pages
+const TEMP_DISABLE_AUTH = true
 
 export function middleware(request: NextRequest) {
   const token = request.cookies.get('auth_token')?.value
@@ -22,7 +24,7 @@ export function middleware(request: NextRequest) {
 
   // 3. 인증 필요한 /[locale]/works/* 경로만 차단 (works 메인 페이지는 제외)
   const isProtectedWorks = /^\/(en|ko)\/works\/.+$/.test(pathname)
-  if (isProtectedWorks && token !== 'valid') {
+  if (!TEMP_DISABLE_AUTH && isProtectedWorks && token !== 'valid') {
     const locale = pathname.startsWith('/ko') ? 'ko' : 'en'
     const loginUrl = new URL(`/${locale}/login`, request.url)
     loginUrl.searchParams.set('from', pathname)
