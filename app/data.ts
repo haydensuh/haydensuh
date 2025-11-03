@@ -91,45 +91,45 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
     //     'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321335_xjn4pn.png',
     //   id: 'incorporation-center',
     // },
-    {
-      name: 'ZUZU Onboarding Optimization',
-      description: 'Survey-Based Routing Design and Flow Simplification',
-      link: '/works/onboarding-optimization',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
-      id: 'onboarding-optimization',
-    },
+    // {
+    //   name: 'ZUZU Onboarding Optimization',
+    //   description: 'Survey-Based Routing Design and Flow Simplification',
+    //   link: '/works/onboarding-optimization',
+    //   image:
+    //     'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
+    //   id: 'onboarding-optimization',
+    // },
     {
       name: 'Enhancing Investor Engagement Services',
       description:
         'Designed a broker (referrer) system based on existing investors',
-      link: '/works/invest-relation',
+      link: '/works/investor-relation',
       image:
         'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
       id: 'invest-relation',
     },
-    {
-      name: 'Improving Meeting Notice Functionality',
-      description: 'Introducing customizable agenda content',
-      link: '/works/meeting-notice-agenda-details-edit',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321251_piuaqp.png',
-      id: 'meeting-notice-agenda-details-edit',
-    },
-    {
-      name: 'Monomart Business Membership Retention Enhancement',
-      description: 'Reorder Feature Introduction & Member Growth',
-      link: '/works/monomart-business-membership-retention',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321343_dckvuv.png',
-      id: 'monomart-business-membership-retention',
-    },
-    {
-      name: 'Integrated Stakeholder Management',
-      description: 'Designing a unified stakeholder management system',
-      link: '/works/stakeholder-management',
-      id: 'stakeholder-management',
-    },
+    // {
+    //   name: 'Improving Meeting Notice Functionality',
+    //   description: 'Introducing customizable agenda content',
+    //   link: '/works/meeting-notice-agenda-details-edit',
+    //   image:
+    //     'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321251_piuaqp.png',
+    //   id: 'meeting-notice-agenda-details-edit',
+    // },
+    // {
+    //   name: 'Monomart Business Membership Retention Enhancement',
+    //   description: 'Reorder Feature Introduction & Member Growth',
+    //   link: '/works/monomart-business-membership-retention',
+    //   image:
+    //     'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321343_dckvuv.png',
+    //   id: 'monomart-business-membership-retention',
+    // },
+    // {
+    //   name: 'Integrated Stakeholder Management',
+    //   description: 'Designing a unified stakeholder management system',
+    //   link: '/works/stakeholder-management',
+    //   id: 'stakeholder-management',
+    // },
     // {
     //   name: 'AI-Powered Business Purpose Recommendation',
     //   description:
@@ -147,30 +147,30 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
         'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321334_ddfwfc.png',
       id: 'unlisted-safe-trade',
     },
-    {
-      name: '주주간계약서 작성 기능',
-      description: '낯설고 어려운 계약서 작성을 누구나 쉽게',
-      link: '/works/shareholder-agreement',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/shareholder_agreement_f4bqqj.png',
-      id: 'shareholder-agreement',
-    },
-    {
-      name: 'ZUZU 온보딩 최적화',
-      description: '가입 설문 기반 라우팅 설계 및 플로우 단축',
-      link: '/works/company-registration',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
-      id: 'company-registration',
-    },
-    {
-      name: '투자자 매칭 서비스 고도화',
-      description: '기존 투자자 추천 기반 딜소싱 설계',
-      link: '/works/investor-relation',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
-      id: 'investor-relation',
-    },
+    // {
+    //   name: '주주간계약서 작성 기능',
+    //   description: '낯설고 어려운 계약서 작성을 누구나 쉽게',
+    //   link: '/works/shareholder-agreement',
+    //   image:
+    //     'https://res.cloudinary.com/hazelsuh-site/image/upload/shareholder_agreement_f4bqqj.png',
+    //   id: 'shareholder-agreement',
+    // },
+    // {
+    //   name: 'ZUZU 온보딩 최적화',
+    //   description: '가입 설문 기반 라우팅 설계 및 플로우 단축',
+    //   link: '/works/onboarding-optimization',
+    //   image:
+    //     'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321250_taty9w.png',
+    //   id: 'company-registration',
+    // },
+    // {
+    //   name: '투자자 매칭 서비스 고도화',
+    //   description: '기존 투자자 추천 기반 딜소싱 설계',
+    //   link: '/works/investor-relation',
+    //   image:
+    //     'https://res.cloudinary.com/hazelsuh-site/image/upload/001_hv86py.png',
+    //   id: 'investor-relation',
+    // },
     // {
     //   name: '법인설립지원센터(세무펌 전용 CRM)',
     //   description: '설립부터 기장까지 원스톱으로 연결',
@@ -187,28 +187,28 @@ export const ALL_WORKS: Record<Locale, AllWorks[]> = {
     //     'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321253_vsqk4g.png',
     //   id: 'incorporation-redesign',
     // },
-    {
-      name: '소집통지 메일 커스텀',
-      description: '소집통지서 내 안건 내용을 추가 및 삭제 가능하도록',
-      link: '/works/meeting-notice-agenda-details-edit',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321251_piuaqp.png',
-      id: 'meeting-notice-agenda-details-edit',
-    },
-    {
-      name: '모노마트 사업자 회원 리텐션 향상',
-      description: '재구매 기능 도입 및 사업자 회원 증대',
-      link: '/works/monomart-business-membership-retention',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321343_dckvuv.png',
-      id: 'monomart-business-membership-retention',
-    },
-    {
-      name: '이해관계자 통합 관리 시스템',
-      description: '통합 이해관계자 관리 시스템 설계',
-      link: '/works/stakeholder-management',
-      id: 'stakeholder-management',
-    },
+    // {
+    //   name: '소집통지 메일 커스텀',
+    //   description: '소집통지서 내 안건 내용을 추가 및 삭제 가능하도록',
+    //   link: '/works/meeting-notice-agenda-details-edit',
+    //   image:
+    //     'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321251_piuaqp.png',
+    //   id: 'meeting-notice-agenda-details-edit',
+    // },
+    // {
+    //   name: '모노마트 사업자 회원 리텐션 향상',
+    //   description: '재구매 기능 도입 및 사업자 회원 증대',
+    //   link: '/works/monomart-business-membership-retention',
+    //   image:
+    //     'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321343_dckvuv.png',
+    //   id: 'monomart-business-membership-retention',
+    // },
+    // {
+    //   name: '이해관계자 통합 관리 시스템',
+    //   description: '통합 이해관계자 관리 시스템 설계',
+    //   link: '/works/stakeholder-management',
+    //   id: 'stakeholder-management',
+    // },
   ],
 }
 
