@@ -150,7 +150,42 @@ export default function ClientPage({ locale }: Props) {
         </div>
       </motion.section>
 
-      {/* 3. 경력 */}
+      {/* 3. 블로그 */}
+      <motion.section
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        transition={{ duration: 0.3 }}
+      >
+        <h3 className="mb-3 text-lg font-medium">Blog</h3>
+        <div className="flex flex-col space-y-0">
+          <AnimatedBackground
+            enableHover
+            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
+          >
+            {blogPosts.map((post) => (
+              <Link
+                key={post.uid}
+                href={`/${locale}${post.link}`}
+                className="-mx-3 rounded-xl px-3 py-3"
+                data-id={post.uid}
+              >
+                <div className="flex flex-col space-y-1">
+                  <h4 className="font-normal dark:text-zinc-100">
+                    {post.title}
+                  </h4>
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                    {post.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </AnimatedBackground>
+        </div>
+      </motion.section>
+
+      {/* 4. 경력 */}
       <motion.section
         variants={{
           hidden: { opacity: 0, y: 20 },
@@ -189,41 +224,6 @@ export default function ClientPage({ locale }: Props) {
               </div>
             </a>
           ))}
-        </div>
-      </motion.section>
-
-      {/* 4. 블로그 */}
-      <motion.section
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        transition={{ duration: 0.3 }}
-      >
-        <h3 className="mb-3 text-lg font-medium">Blog</h3>
-        <div className="flex flex-col space-y-0">
-          <AnimatedBackground
-            enableHover
-            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
-          >
-            {blogPosts.map((post) => (
-              <Link
-                key={post.uid}
-                href={`/${locale}${post.link}`}
-                className="-mx-3 rounded-xl px-3 py-3"
-                data-id={post.uid}
-              >
-                <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal dark:text-zinc-100">
-                    {post.title}
-                  </h4>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                    {post.description}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </AnimatedBackground>
         </div>
       </motion.section>
 

@@ -302,6 +302,13 @@ export const WORK_EXPERIENCE = {
 export const BLOG_POSTS = {
   en: [
     {
+      title: 'Making Shareholder Agreements Accessible for Everyone',
+      description:
+        'What I learned while designing ZUZU’s shareholder agreement feature',
+      link: '/blog/shareholder-contract-experience',
+      uid: 'shareholder-contract-experience',
+    },
+    {
       title: 'A Recommendation Is Not Enough',
       description: 'Rethinking AI UX through business purpose suggestions',
       link: '/blog/post-chat-ui',
@@ -312,13 +319,6 @@ export const BLOG_POSTS = {
       description: 'Defining satisfaction through operational definition',
       link: '/blog/zuzu-operational-definition',
       uid: 'zuzu-operational-definition',
-    },
-    {
-      title: 'Making Shareholder Agreements Simple, Not Simplistic',
-      description:
-        'What I Learned While Designing the Shareholder Agreement Builder',
-      link: '/blog/shareholder-contract-experience',
-      uid: 'shareholder-contract-experience',
     },
   ],
   ko: [

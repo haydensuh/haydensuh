@@ -344,7 +344,7 @@ export default function ClientAboutPage({ locale }: Props) {
             <>
               I’m a Product Designer at Kodebox , a subsidiary of{' '}
               <a
-                href="https://www.dunamu.com/"
+                href="https://www.dunamu.com/en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center hover:text-zinc-500 dark:hover:text-zinc-400"
