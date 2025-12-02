@@ -10,7 +10,7 @@ export default async function LoginPage({ params }: { params: any }) {
 
   return (
     <div className={`flex w-full flex-col ${fontClass}`}>
-      <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-12">
+      <div className="relative mx-auto w-full max-w-screen-md flex-1 px-4 pt-12">
         <LoginForm locale={locale} />
       </div>
     </div>
