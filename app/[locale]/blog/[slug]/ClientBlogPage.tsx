@@ -33,7 +33,7 @@ export function ClientWrapper({
   if (!Post) return <div>Loading...</div>
 
   return (
-    <article className="prose prose-neutral dark:prose-invert py-12">
+    <article className="prose prose-neutral dark:prose-invert max-w-none py-12">
       <div className="mb-8">
         <BackButton />
       </div>

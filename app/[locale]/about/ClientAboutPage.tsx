@@ -397,7 +397,7 @@ export default function ClientAboutPage({ locale }: Props) {
           )}
         </p>
 
-        <div className="prose dark:prose-invert space-y-3">
+        <div className="prose dark:prose-invert space-y-3 max-w-none">
           {sections.map((section) => (
             <AccordionItem key={section.title} title={section.title}>
               {section.content}
