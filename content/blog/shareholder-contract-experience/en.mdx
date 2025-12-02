@@ -4,58 +4,70 @@
   caption=""
 />
 
-# Making Shareholder Agreements Simple, Not Simplistic
+# Making Shareholder Agreements Accessible for Everyone
 
-**What I Learned While Designing the Shareholder Agreement Builder**
-
----
-
-ZUZU has long provided automated tools for generating stock transfer and gift agreements.
-But at some point, we began hearing the same questions over and over again:
-
-> Stock transactions don’t cover everything.
-
-> Where do I define the roles and responsibilities between co-founders?
-
-What users were really asking for was a **shareholder agreement**.
-
-In startup founding or stock option execution, a shareholder agreement plays a critical role in preparing for “what if” situations.
-
-But we saw that the barrier to entry remained high:
-
-- Users unfamiliar with shareholder agreements didn’t know where to start.
-- Others tried to write one themselves — only to give up halfway without legal support.
-
-To solve this, we realized it wasn’t enough to just automate a document.
-We had to design the **user's understanding and decision-making process** itself.
+**What I learned while designing ZUZU’s shareholder agreement feature**
 
 ---
 
-## It Wasn’t Just a Standalone Document
+ZUZU has long offered automated document creation for stock transfer and gift contracts.
+But over time, we began receiving a new pattern of questions:
 
-Our initial approach was simple:
+> I was told to include profit-sharing rules through a shareholder agreement when transferring shares. Does ZUZU support that?
 
-- Maintain our current flows for stock transfer/gift agreements
-- Add a new, standalone flow for shareholder agreements (for co-founders or employees)
+> After our stock transfer, we need to prepare a shareholder agreement. Is there a template we can use?
 
-But very quickly, a different pattern emerged.
+> After our stock transfer, we need to prepare a shareholder agreement. Is there a template we can use?
 
-**Users often needed to generate a shareholder agreement while completing a stock transaction.**
+These questions pointed to a growing need: **shareholder agreements**.
 
-These documents were deeply intertwined. They shared overlapping clauses, and splitting them into separate flows created unnecessary friction.
+Shareholder agreements are essential—especially in cases like co-founding a company or exercising stock options—because they help clarify expectations and protect all parties involved.
 
-We had to ask:
+Yet for many users, they remain a daunting task:
 
-- **How do we seamlessly connect the two when needed?**
-- **And how do we preserve a consistent experience when users create each document independently?**
+- Users unfamiliar with shareholder agreements don’t know where to begin.
+- Many abandon the process when attempting to draft them without legal help.
+
+To address this challenge, we needed more than document automation. <br/>
+We needed to rethink how users **understand, navigate, and make decisions** throughout the agreement-creation process.
 
 ---
 
-## Starting with Document Analysis
+## When a single flow couldn’t describe the real user journey
 
-Before designing the UI, we started by analyzing real shareholder agreement documents.
+At first, we planned to introduce the feature through two separate flows:
 
-We reviewed both co-founder and employee agreements clause by clause — identifying what was essential across both, and what was context-specific.
+- The **existing stock transfer/gift contract flow**
+- A new standalone flow for **co-founder or employee shareholder agreements**
+
+But soon, an unexpected scenario surfaced:
+
+**Users often need to draft an employee shareholder agreement while completing a stock transfer.**
+
+The two contracts overlap in content, and some clauses are duplicated across both. <br/>
+This meant that simply adding a separate menu wasn’t enough—we wouldn’t be capturing the actual user experience.
+
+So we reframed the problem:
+
+- **How should the experience work when both agreements are completed together?**
+- **And how do we maintain consistency when they’re completed separately?**
+
+This became the starting point for redesigning the flow.
+
+---
+
+## Starting with document-level analysis
+
+To understand how the flows should connect and how to maintain a consistent experience,
+we first conducted a structural analysis of real shareholder agreements.
+
+We compared co-founder agreements with employee shareholder agreements, identifying:
+
+- Clauses common to both
+
+- Clauses required only for specific scenarios
+
+- Clauses that overlap with stock transfer/gift contracts
 
 <img
   src="https://res.cloudinary.com/hazelsuh-site/image/upload/v1747190442/Snipaste_2025-05-14_11-40-32_f9iesm.png"
@@ -68,8 +80,7 @@ We reviewed both co-founder and employee agreements clause by clause — identif
   }}
 />
 
-We also compared employee shareholder agreements with our existing transfer/gift templates,
-to identify redundant content or clauses that needed to be introduced.
+We then compared employee shareholder agreements with the existing stock transfer/gift contracts to remove redundancies and clarify what needed to be added.
 
 <img
   src="https://res.cloudinary.com/hazelsuh-site/image/upload/Snipaste_2025-05-14_11-37-34_cfnzdw.png"
@@ -82,8 +93,12 @@ to identify redundant content or clauses that needed to be introduced.
   }}
 />
 
-From there, we structured the input flow: <br/>
-which information should come first, what to ask the user, and how to help them decide what to include or leave out.
+From this, we defined: <br/>
+
+- What information users must provide
+- In what sequence
+- Which clauses require user choices
+- And how to expose each input in the UI
 
 <img
   src="https://res.cloudinary.com/hazelsuh-site/image/upload/Snipaste_2025-05-14_11-46-05_jfph5b.png"
@@ -97,19 +112,19 @@ which information should come first, what to ask the user, and how to help them 
 
 ---
 
-## Rethinking the Flow
+## UX strategies to reduce decision-making burden
 
-### 1. Step-by-step, not all at once
+### 1. Stepper-based structure
 
-Legacy contract forms often asked users to fill in everything on a single page.
-But shareholder agreements are dense and nuanced — they demand reflection.
+The previous contracts were created on a single-page input form. <br/>
+But shareholder agreements require deeper consideration for each clause.
 
-So we broke the process into four steps using a **stepper-based interface**:
+To reduce cognitive load, we moved to a **stepper-based multi-step process**:
 
-1. Enter contract date
-2. Register parties involved
-3. Select and configure relevant clauses
-4. Preview and edit the final agreement
+1. General contract information
+2. Party information
+3. Clause selection and condition setup
+4. Preview and edit
 
 <img
   src="https://res.cloudinary.com/hazelsuh-site/image/upload/Snipaste_2025-05-14_11-42-37_ehvaer.png"
@@ -121,23 +136,27 @@ So we broke the process into four steps using a **stepper-based interface**:
   }}
 />
 
-This reduced cognitive load and made the process feel more manageable.
+Breaking the flow into steps helped users avoid overload and understand decisions one at a time.
 
 <br />
-### 2. Answering questions before they’re asked
+### 2. FAQ section for contextual guidance
 
-At every clause-selection screen, we added an **FAQ sidebar**.
+Users frequently hesitate at the clause-selection stage:
 
-Users often hesitate with questions like:
+> Do I really need this clause?
 
-> “Do I really need this clause?”
+> Is this relevant to our situation?
 
-> “Is this relevant to our company?”
+To support decision-making, we introduced a **left-hand FAQ section** on each clause page.
 
-So we provided explanations: <br/>
-What the clause means, why it matters, and when it’s typically used — all in plain language.
+Each section explained:
 
-Important clauses were pre-selected with “Yes” by default, while saying “No” triggered a **warning panel** that explained potential risks.
+- Why the clause matters
+- When it is typically needed
+- How most users decide
+
+For high-importance clauses, the default was set to “Yes.”
+If the user selected “No,” a warning panel highlighted potential risks and consequences to ensure informed decisions.
 
 <img
   src="https://res.cloudinary.com/hazelsuh-site/image/upload/Snipaste_2025-05-14_11-49-38_snh44w.png"
@@ -150,9 +169,10 @@ Important clauses were pre-selected with “Yes” by default, while saying “N
 />
 
 <br />
-### 3. The contract is the output, not the input
+### 3. Editable preview for fine-tuning language
 
-Once users completed the form, they were taken to a **live preview** of the full contract — with the ability to edit any clause directly.
+Once the draft was generated, users could review the entire contract in the **document preview**.
+This screen also allowed direct editing of individual clauses.
 
 <img
   src="https://res.cloudinary.com/hazelsuh-site/image/upload/Group_427321258_duzvhk.png"
@@ -165,46 +185,50 @@ Once users completed the form, they were taken to a **live preview** of the full
   }}
 />
 
-> I want to phrase this more gently.
+> We prefer a softer tone here…
 
-> We agreed on a slightly different wording.
+> We already agreed on a specific wording…
 
-We knew these fine-tuned adjustments were common — so we built editing into the experience, not as an afterthought.
-
----
-
-## What We Were Really Solving
-
-This project started as a document automation problem. <br/>
-But we quickly realized the real challenge wasn’t the document — it was the **people** writing it.
-
-- Users aren’t familiar with legal templates.
-- They struggle to judge what’s necessary.
-- They need to feel confident in what they’ve produced.
-
-So we designed the experience around these realities.<br/>
-**One decision at a time. One explanation at a time.**
-
-Not overloading the interface with legal jargon,
-but surfacing guidance at just the right moment — when it’s actually needed.
+Contracts often require nuanced adjustments,
+so supporting text-level edits was crucial for reflecting real negotiations and agreements.
 
 ---
 
-## Closing Thoughts — <br/>Building for Agreement, Not Just Documents
+## Designing for user decision-making—not automation
 
-This feature wasn’t about automating paperwork. <br/>
-It was about building a tool that helps people document their **mutual understanding and expectations**.
+The project began as a simple extension of our contract automation system. <br/>
+But it quickly became clear that the real challenge wasn’t generating the document,
+but enabling users to **understand, choose, and verify** the content.
 
-What we aimed to provide was:
+Our research surfaced three core needs:
 
-- Structured inputs, not blank forms
-- Decision-driven flows, not blind automation
-- Editable outcomes, not static templates
+- Users are not familiar with legal terminology or contract structure.
+- They struggle to assess which clauses are relevant.
+- They need control over the final document and wording.
 
-Legal UX means navigating complexity with care.
-It’s about breaking down ambiguity into clear decisions — without assuming the user is a legal expert.
+Thus, the real task was to create a **UX structure that supports complex decision-making**, not just automate text generation.
 
-The result wasn’t perfect. But we’re proud of how we tackled a difficult domain, and made meaningful progress toward a better contract-writing experience.
+We designed a contextual guidance model that avoids overwhelming explanations,
+but provides precise support at exactly the moments users need to make a decision.
 
-Because in the end, it’s not just about getting the document done.
-It’s about making sure people understand what they’ve agreed to — and feel confident moving forward.
+---
+
+## Final thoughts
+
+This project was not about generating a legal document. <br/>
+It was about building a **user-centered process** for drafting shareholder agreements.
+
+It required much more than screen design—it involved:
+
+- Clause-level structural analysis
+- Mapping user decision points
+- Crafting an information-exposure strategy tailored to the legal domain
+
+The outcome:
+
+- Users unfamiliar with contracts can understand why certain clauses matter
+- Experienced users can adjust the language and reflect actual agreements
+- Both groups can complete a legally meaningful document with confidence
+
+The true value of this work wasn’t automation. <br/>
+It was creating a foundation where users can **make informed decisions, review their choices, and confidently finalize their agreements.**

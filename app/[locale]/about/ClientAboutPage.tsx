@@ -245,12 +245,10 @@ const ABOUT_SECTIONS_BY_LOCALE: Record<Locale, AboutSectionData[]> = {
           </p>
           <ul className="list-disc pl-4 text-zinc-600 dark:text-zinc-400">
             <li>
-              저는 비즈니스 로직과 사람의 행동이 만나는 지점을 설계하는 일을
-              좋아합니다. '이 단계에서 가장 중요한 것은 무엇일까?'를 끊임없이
-              묻고 사용자를 혼란스럽게 하지 않는 도구를 만들고자 합니다.
+              저는 서비스가 돌아가는 비즈니스 로직과 실제 사람이 행동하는 방식이 만나는 지점을 관찰하고 그 사이의 간극을 메우는 걸 좋아합니다. 
             </li>
             <li>
-              사용자가 인지적 피로 없이 흐름을 따라갈 수 있도록 구조화된
+            '이 단계에서 가장 중요한 것은 무엇일까?'를 끊임없이 묻고, 사용자가 인지적 피로 없이 흐름을 따라갈 수 있도록 구조화된
               선택지와 문맥에 맞는 안내, 단계적인 정보 제공을 우선합니다.
             </li>
             <li>
@@ -271,15 +269,14 @@ const ABOUT_SECTIONS_BY_LOCALE: Record<Locale, AboutSectionData[]> = {
       content: (
         <ul className="list-disc space-y-2 pl-4 text-zinc-600 dark:text-zinc-400">
           <li>
-            <span className="font-semibold">탐험력:</span>시도하고 관찰하며
+            <span className="font-semibold">탐험력:</span> 시도하고 관찰하며
             새로운 것을 만나는 데서 힘을 얻습니다. 당장 쓸모가 없어보이더라도
             나쁜 것이 아니라면 일단 해보려 합니다.
           </li>
           <li>
             <span className="font-semibold">질문력:</span> 마음속의 질문을
             놓치지 않고 문제의 빈틈을 찾아내는 데 집중합니다. 특히 사업 모델이나
-            사용자 여정에서 '모르는데 알고 있다고 착각하는 것'을 밝혀내는 데
-            관심이 많습니다.
+            사용자 여정에서 '모르는데 알고 있다고 착각하는 것'을 짚어내고자 합니다.
           </li>
           <li>
             <span className="font-semibold">교감력:</span> 감정을 섬세하게
@@ -302,7 +299,7 @@ const ABOUT_SECTIONS_BY_LOCALE: Record<Locale, AboutSectionData[]> = {
       title: '업무 밖, 일상 속에서',
       content: (
         <p className="text-zinc-600 dark:text-zinc-400">
-          저는 책을 읽거나 여행하면서 새로운 관점과 조용한 순간에서 영감을
+          책을 읽거나 여행하면서 새로운 관점과 조용한 순간에서 영감을
           얻습니다. 일상 속에서 사람과 시스템을 관찰하며 '이거 정말 잘
           만들었다'는 생각이 드는 디테일에 관심이 많습니다.
           <br />
