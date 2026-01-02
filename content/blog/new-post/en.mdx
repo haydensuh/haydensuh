@@ -1,0 +1,337 @@
+# How Product Designers Can Use AI in Their Work
+
+**Improving Workflows from Design to Development with AI**
+
+_What I learned while integrating AI into my daily work as a product designer —  
+sharing how AI improved efficiency from issue identification to developer handoff._
+
+---
+
+A product designer's work is broader than you might think. Understanding user problems, designing solutions, communicating with developers, and organizing documentation — each step takes time, and there's often repetitive work involved.
+
+With the emergence of AI tools, we now have opportunities to improve these workflows. I'll share how I've enhanced my actual work processes using various AI tools like ChatGPT, Cursor, and GPT Atlas.
+
+---
+
+## 1. Issue Identification: Organizing Slack Messages at a Glance
+
+<img
+  src="https://res.cloudinary.com/hazelsuh-site/image/upload/v1767339739/Frame_1310330235_uhlgjn.png"
+  alt=""
+  style={{
+    width: '100%',
+    height: 'auto',
+    backgroundColor: 'rgba(0, 0, 0, 0.02)',
+    borderRadius: '8px',
+  }}
+/>
+When starting a project, the first thing to do is understand the current
+situation. Reading through countless Slack messages and issues one by one is
+time-consuming.
+
+**Solution:**
+
+- Collect relevant Slack messages and issues and send them to ChatGPT
+- Request: "Organize this content by topic and prioritize it"
+- Receive a summarized result that can be understood at a glance, enabling quick context understanding
+
+This allows you to complete issue identification work that used to take hours in just a few minutes.
+
+---
+
+## 2. PRD Writing: Quickly Create Drafts, Then Refine Details
+
+<img
+  src="https://res.cloudinary.com/hazelsuh-site/image/upload/v1767340290/Frame_1310330236_srjksa.png"
+  alt=""
+  style={{
+    width: '100%',
+    height: 'auto',
+    backgroundColor: 'rgba(0, 0, 0, 0.02)',
+    borderRadius: '8px',
+  }}
+/>
+After identifying issues, you need to write a PRD (Product Requirements
+Document). However, writing everything from scratch can be burdensome.
+
+**Solution:**
+
+- Request ChatGPT to write a PRD draft based on the content organized in step 1
+- AI creates the structure and framework, while you refine details and business context
+- Save time on repetitive template writing and focus on core content
+
+The draft created by AI isn't perfect, but it provides a starting point, significantly improving overall writing speed.
+
+---
+
+## 3. Internet Search: Efficiently Finding Related Materials
+
+<img
+  src="https://res.cloudinary.com/hazelsuh-site/image/upload/v1767340196/TV_-_7_r78fhq.png"
+  alt=""
+  style={{
+    width: '100%',
+    height: 'auto',
+    backgroundColor: 'rgba(0, 0, 0, 0.02)',
+    borderRadius: '8px',
+  }}
+/>
+While writing a PRD, you often need related materials or case studies. Searching
+across multiple search engines is time-consuming.
+
+**Solution:**
+
+- Use GPT Atlas to search for additional materials on related topics
+- Request: "Find the latest trends or case studies related to this feature"
+- Receive summarized search results to quickly grasp key information
+
+This is particularly useful when searching for overseas cases or the latest trend information.
+
+---
+
+## 4. Draft Design: Quickly Creating Prototypes with Code
+
+Drawing screens in design tools is important, but sometimes you need a working prototype. Especially when communicating with developers, a coded draft can be clearer.
+
+**Solution:**
+
+- Request Cursor to create a draft design based on the content organized above
+- Instruct: "Create a frontend draft based on this PRD and references"
+- Minimize changes to backend code, only modifying to a debuggable level
+- Focus on frontend code to quickly complete a prototype
+
+This allows you to receive much more specific feedback than static designs drawn in Figma.
+
+---
+
+## 5. Development: Progressive Improvement Toward Desired Direction
+
+<img
+  src="https://res.cloudinary.com/hazelsuh-site/image/upload/v1767340727/TV_-_13_shtxfj.png"
+  alt=""
+  style={{
+    width: '100%',
+    height: 'auto',
+    backgroundColor: 'rgba(0, 0, 0, 0.02)',
+    borderRadius: '8px',
+  }}
+/>
+
+Once the draft is complete, you move into the development phase. At this stage, clearly communicate your desired direction and have AI modify the code.
+
+**Solution:**
+
+- Make modification requests like "Change this part" or "Add this feature"
+- However, rather than making abstract requests, first analyze the backend logic and communicate modifications that align with it
+- Understand the overall structure by using Cursor to grasp backend logic
+- Progressively improve to reach the desired outcome
+
+By watching AI modify code, you naturally understand the backend structure as well.
+
+Cursor's command settings can significantly speed up your workflow. Here's how I've configured mine:
+
+```bash
+/branch
+
+1. Stash changes in the current branch
+2. Run git checkout master to switch to the master branch
+3. Run g farbm to rebase the latest master branch
+4. Create a branch name with git checkout -b suhhj-00000
+5. The numbers in suhhj-00000 should be randomly assigned
+```
+
+```bash
+/prepare-pr
+
+Follow these steps **in order and accurately**.
+
+### 1. Check Current Changes
+
+- Use `git status` and `git diff` to understand the changes in the current branch.
+
+### 2. Suggest Branch Name
+
+- Based on the changed files and code content, suggest **one branch name that best reflects the core of the work**.
+- Branch naming rules:
+
+  - Must clearly indicate the purpose (feature / fix / refactor / ux, etc. to show context)
+  - Use kebab-case
+
+### 3. Request User Confirmation
+
+- Show the suggested branch name to the user,
+- Use `AskUserQuestion` to **request confirmation** whether to use this branch name.
+
+### 4. Rename Branch
+
+- Rename the current branch to the branch name approved by the user.
+
+### 5. Stage and Commit
+
+- Stage all changes.
+- Write a commit message that accurately reflects the changes and commit. (Commit messages should be written in Korean.)
+
+### 6. Push to Remote Branch
+
+- Push the new branch to the remote repository.
+
+### 7. Create PR
+
+- Create a PR.
+- When writing the PR, be sure to follow:
+
+  - assignee: `suhhj93`
+  - PR title and body should clearly explain the changes
+  - **Follow the PR guidelines** defined in the repository's `CLAUDE.md`
+
+### 8. Return Result
+
+- Return the URL of the created PR as the final result.
+
+### Notes
+
+- Commit messages must accurately reflect the changes.
+- PR title and body should be sufficiently descriptive for reviewers to understand the context.
+- All processes should be performed without skipping steps.
+
+```
+
+---
+
+## 6. Documentation: Writing Policy Documents or Guides
+
+<img
+  src="https://res.cloudinary.com/hazelsuh-site/image/upload/v1767340726/TV_-_14_rizno5.png"
+  alt=""
+  style={{
+    width: '100%',
+    height: 'auto',
+    backgroundColor: 'rgba(0, 0, 0, 0.02)',
+    borderRadius: '8px',
+  }}
+/>
+
+After prototyping is complete, you need to organize related documents. Policy documents, guides, or team sharing documents are often needed.
+
+**Solution:**
+
+- Request Cursor: "Write the developed content as an organized policy document"
+- Automatically generate structured document format
+- Make additional modifications and supplements as needed
+
+You can quickly write consistently formatted documents, making team communication smoother.
+
+---
+
+## 7. Developer Handoff: Efficient Delivery with Organized Content
+
+<img
+  src="https://res.cloudinary.com/hazelsuh-site/image/upload/v1767340854/TV_-_15_b3tbmk.png"
+  alt=""
+  style={{
+    width: '100%',
+    height: 'auto',
+    backgroundColor: 'rgba(0, 0, 0, 0.02)',
+    borderRadius: '8px',
+  }}
+/>
+
+Finally, you need to deliver the work to developers. Verbal communication is important, but having documented content makes things much smoother.
+
+**Solution:**
+
+- Synthesize all the content organized above (PRD, design draft, development content, documents) into a handoff document
+- Request Cursor: "Organize this content for developer handoff"
+- Share the document in advance before verbal communication to improve conversation efficiency
+
+Of course, having verbal pre-communication is much smoother, but having a document allows you to quickly share the context of the conversation.
+
+---
+
+## Core Principles for Using AI
+
+As you apply the 7 steps above in practice, you'll gain insights into how to communicate more effectively with AI. Here are some important principles to share.
+
+### 1. Using AI as a Reviewer
+
+When making complex design or policy decisions, it's more effective to use AI as a **reviewer rather than a substitute**. This is especially helpful when designers make policy decisions and need to communicate with engineers or business teams.
+
+**How to Use:**
+
+- First input what role AI should take (business team or engineer, etc.)
+- Request: "Find the premises of my argument and state the problems with those premises"
+- Use AI to find logical gaps from various perspectives (engineer, business team, user, etc.)
+
+This way, you can discover overlooked parts or logical contradictions in advance.
+
+### 2. Providing Context All at Once
+
+For AI to produce accurate results, sufficient context is needed. It's important to **provide as much context as possible at once** — text, photos, related documents, etc.
+
+**Reasons:**
+
+- Asking questions without context makes it difficult for AI to grasp the full context
+- Providing information sequentially leads AI to make only local judgments
+- Providing all information at once allows AI to make global judgments and find logical contradictions
+- Note: Cursor indexes the codebase, so context is automatically included
+
+### 3. Sequential Prompting vs. Holistic Prompting
+
+The quality of results varies greatly depending on how you deliver information to AI.
+
+**Sequential Delivery:**
+
+- Analogy: Telling a chef to cook by throwing ingredients one by one
+- AI's thinking: "What am I supposed to do with this ingredient?" (Local judgment)
+- Problems: Doesn't notice when statements contradict, the more instructions, the more code gets tangled or style breaks
+
+**Holistic/Batch Delivery:**
+
+- Analogy: "Mise en place": Prepare all ingredients and start cooking
+- AI's thinking: "Ah, I'm making this by combining these ingredients." (Global judgment)
+- Advantages: Finds logical contradictions between Document A and Document B, produces high-quality results from the start
+
+**Practical Tips:**
+
+- Provide PRD, references, existing code, related documents all at once
+- Use prompts that start with "Synthesize all this content..."
+- Provide the full context at once rather than breaking it into steps
+
+### 4. Human in the Loop: Review All Modifications Before Proceeding
+
+Rather than using AI-generated results as-is, it's important to **review all modifications before proceeding**.
+
+**Reasons:**
+
+- AI-generated code or documents often have more logical errors or missing business context than expected
+- Human review and modification at each stage ensures final quality
+- Especially for policy decisions or important business logic, human final review is essential
+
+**Practical Tips:**
+
+- Always review code generated by AI before execution
+- Review documents from business context and user experience perspectives
+- Go through final review process before sharing with the team
+
+---
+
+## Core of Improving Work Processes with AI
+
+The key is not having AI do everything, but **streamlining repetitive and time-consuming tasks**.
+
+At each stage, AI creates drafts, and I make judgments considering business context and user experience on top of that. When AI quickly collects and organizes information, I can focus on more important decisions.
+
+---
+
+## Closing Thoughts
+
+A product designer's work is diverse and complex. Using AI tools appropriately can reduce this complexity and allow you to invest time in more valuable work.
+
+Of course, the results created by AI aren't always perfect.
+
+But what's important is judging how to use AI and which parts to integrate AI into, and I think it's important to find ways to use AI as a tool that fits each person's work environment and processes.
+
+---
+
+- [Cursor](https://cursor.com/)
+- [GPT Atlas](https://chatgpt.com/atlas/)

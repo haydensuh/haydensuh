@@ -302,9 +302,15 @@ export const WORK_EXPERIENCE = {
 export const BLOG_POSTS = {
   en: [
     {
+      title: 'How Product Designers Can Use AI in Their Work',
+      description: 'Improving workflows from design to development with AI',
+      link: '/blog/new-post',
+      uid: 'new-post',
+    },
+    {
       title: 'Making Shareholder Agreements Accessible for Everyone',
       description:
-        'What I learned while designing ZUZU’s shareholder agreement feature',
+        "What I learned while designing ZUZU's shareholder agreement feature",
       link: '/blog/shareholder-contract-experience',
       uid: 'shareholder-contract-experience',
     },
@@ -322,6 +328,12 @@ export const BLOG_POSTS = {
     },
   ],
   ko: [
+    {
+      title: '프로덕트 디자이너가 업무에 AI를 활용하는 방법',
+      description: '디자인부터 개발까지, AI로 워크플로우 개선하기',
+      link: '/blog/new-post',
+      uid: 'new-post',
+    },
     {
       title: 'AI 인터페이스 재설계 | 행동 가능한 UX',
       description: '사업목적 추천 기능을 설계하며 다시 생각한 AI 인터페이스',
@@ -346,6 +358,19 @@ export const BLOG_POSTS = {
 export const ALL_BLOG_POSTS = {
   en: [
     {
+      title: 'How Product Designers Can Use AI in Their Work',
+      description: 'Improving workflows from design to development with AI',
+      link: '/blog/new-post',
+      uid: 'new-post',
+    },
+    {
+      title: 'Making Shareholder Agreements Accessible for Everyone',
+      description:
+        "What I learned while designing ZUZU's shareholder agreement feature",
+      link: '/blog/shareholder-contract-experience',
+      uid: 'shareholder-contract-experience',
+    },
+    {
       title: 'A Recommendation Is Not Enough',
       description: 'Rethinking AI UX through business purpose suggestions',
       link: '/blog/post-chat-ui',
@@ -360,7 +385,13 @@ export const ALL_BLOG_POSTS = {
   ],
   ko: [
     {
-      title: '추천은 출력이 아니다',
+      title: '프로덕트 디자이너가 업무에 AI를 활용하는 방법',
+      description: '디자인부터 개발까지, AI로 워크플로우 개선하기',
+      link: '/blog/new-post',
+      uid: 'new-post',
+    },
+    {
+      title: 'AI 인터페이스 재설계 | 행동 가능한 UX',
       description: '사업목적 추천 기능을 설계하며 다시 생각한 AI 인터페이스',
       link: '/blog/post-chat-ui',
       uid: 'post-chat-ui',
@@ -370,6 +401,12 @@ export const ALL_BLOG_POSTS = {
       description: 'ZUZU의 법인 설립 기능을 통해 본 조작적 정의',
       link: '/blog/zuzu-operational-definition',
       uid: 'zuzu-operational-definition',
+    },
+    {
+      title: '낯설고 어려운 주주간계약서 작성을 누구나 쉽게',
+      description: '주주간계약서 작성 기능을 설계하며 배운 것들',
+      link: '/blog/shareholder-contract-experience',
+      uid: 'shareholder-contract-experience',
     },
   ],
 }
