@@ -45,21 +45,21 @@ export const PROJECTS: Record<Locale, Project[]> = {
   ],
   ko: [
     {
-      name: '비상장주식 안전거래 서비스 with 증권플러스',
+      name: '비상장주식 안전거래 서비스 with 증권플러스 비상장',
       description: '편리함과 법적 안전성을 갖춘 비상장 주식 거래 서비스',
       link: '/works/unlisted-safe-trade',
       image:
         'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321334_ddfwfc.png',
       id: 'unlisted-safe-trade',
     },
-    {
-      name: '주주간계약서 작성 기능',
-      description: '낯설고 어려운 계약서 작성을 누구나 쉽게',
-      link: '/works/shareholder-agreement',
-      image:
-        'https://res.cloudinary.com/hazelsuh-site/image/upload/shareholder_agreement_f4bqqj.png',
-      id: 'shareholder-agreement',
-    },
+    // {
+    //   name: '주주간계약서 작성 기능',
+    //   description: '낯설고 어려운 계약서 작성을 누구나 쉽게',
+    //   link: '/works/shareholder-agreement',
+    //   image:
+    //     'https://res.cloudinary.com/hazelsuh-site/image/upload/shareholder_agreement_f4bqqj.png',
+    //   id: 'shareholder-agreement',
+    // },
   ],
 }
 

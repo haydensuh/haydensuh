@@ -251,7 +251,7 @@ export default function ClientPage({ locale }: Props) {
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           {locale === 'en'
             ? 'Designing intuitive and accessible interactive systems by aligning user needs with technical implementation — bridging design, development, and research through hands-on practice.'
-            : '비즈니스 문제를 구조적으로 분석하고 사용자 중심의 설계를 통해 누구나 이해하고 쉽게 이용할 수 있는 흐름을 만드는 디자인을 합니다. 디자인은 단순한 화면 구성이 아니라 사람들이 더 나은 결정을 내릴 수 있도록 돕는 도구라고 믿습니다.'}
+            : '비즈니스 문제를 구조적으로 분석하고 사용자 중심의 설계를 통해 오해와 실수를 줄여 신뢰할 수 있는 결과로 이어지게 만드는 디자인을 합니다. 디자인은 단순한 화면 구성이 아니라 사람들이 더 나은 결정을 내릴 수 있도록 돕는 설계 도구라고 믿습니다.'}
         </p>
       </motion.section>
 
