@@ -5,6 +5,10 @@ import { MDXComponents } from 'mdx/types'
 import { useEffect, useState } from 'react'
 import { BackButton } from '@/components/ui/back-button'
 import { CopyButton } from '@/components/ui/copy-button'
+import {
+  MDXImageGalleryAutoBind,
+  MDXImageGalleryProvider,
+} from '@/components/ui/mdx-image-gallery'
 export function ClientWorkDetailPage({
   locale,
   slug,
@@ -33,14 +37,18 @@ export function ClientWorkDetailPage({
   if (!Post) return <div>Loading...</div>
 
   return (
-    <article className="prose prose-neutral dark:prose-invert max-w-none py-12">
-      <div className="mb-8">
-        <BackButton />
-      </div>
-      <div className="absolute top-10 right-4">
-        <CopyButton />
-      </div>
-      <Post components={components} />
-    </article>
+    <MDXImageGalleryProvider>
+      <MDXImageGalleryAutoBind>
+        <article className="prose prose-neutral dark:prose-invert max-w-none py-12">
+          <div className="mb-8">
+            <BackButton />
+          </div>
+          <div className="absolute top-10 right-4">
+            <CopyButton />
+          </div>
+          <Post components={components} />
+        </article>
+      </MDXImageGalleryAutoBind>
+    </MDXImageGalleryProvider>
   )
 }
