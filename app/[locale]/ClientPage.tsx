@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react'
 import { motion } from 'motion/react'
-import { XIcon, ArrowRightIcon } from 'lucide-react'
+import { XIcon, ArrowRightIcon, Pin } from 'lucide-react'
 import Link from 'next/link'
 
 import { Spotlight } from '@/components/ui/spotlight'
@@ -164,7 +164,7 @@ export default function ClientPage({ locale }: Props) {
             enableHover
             className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
           >
-            {blogPosts.map((post) => (
+            {blogPosts.map((post, index) => (
               <Link
                 key={post.uid}
                 href={`/${locale}${post.link}`}
@@ -172,9 +172,17 @@ export default function ClientPage({ locale }: Props) {
                 data-id={post.uid}
               >
                 <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal dark:text-zinc-100">
-                    {post.title}
-                  </h4>
+                  <div className="flex items-center gap-2">
+                    <h4 className="font-normal dark:text-zinc-100">
+                      {post.title}
+                    </h4>
+                    {index === 0 ? (
+                      <span className="inline-flex items-center rounded-full bg-zinc-200/70 px-2 py-0.5 text-[11px] font-medium text-zinc-700 dark:bg-zinc-800/80 dark:text-zinc-200">
+                        <Pin className="mr-1 h-3 w-3" />
+                        {locale === 'en' ? 'Pinned' : 'Pinned'}
+                      </span>
+                    ) : null}
+                  </div>
                   <p className="text-sm text-zinc-500 dark:text-zinc-400">
                     {post.description}
                   </p>
