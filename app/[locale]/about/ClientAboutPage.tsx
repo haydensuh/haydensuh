@@ -263,8 +263,8 @@ const ABOUT_SECTIONS_BY_LOCALE: Record<Locale, AboutSectionData[]> = {
             않아도 다음 행동으로 넘어갈 수 있는 상태입니다. 화면 너머에는 항상
             각자 다른 상황과 목표를 가진{' '}
             <span className="font-semibold">사람</span>이 있다고 생각하고 그
-            사람이 어떤 맥락에서 이 화면을 보고 있을지를 상상하며 설계하려고
-            합니다.
+            사람이 어떤 맥락에서 이 화면을 보고 있을지를 머릿 속에 그리고
+            설계하려고 합니다.
           </p>
         </>
       ),
