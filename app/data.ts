@@ -304,8 +304,8 @@ export const BLOG_POSTS = {
     {
       title: 'How Product Designers Can Use AI in Their Work',
       description: 'Improving workflows from design to development with AI',
-      link: '/blog/new-post',
-      uid: 'new-post',
+      link: '/blog/ai-in-design',
+      uid: 'ai-in-design',
     },
     {
       title: 'Making Shareholder Agreements Accessible for Everyone',
@@ -331,8 +331,8 @@ export const BLOG_POSTS = {
     {
       title: '프로덕트 디자이너가 업무에 AI를 활용하는 방법',
       description: '디자인부터 개발까지, AI로 워크플로우 개선하기',
-      link: '/blog/new-post',
-      uid: 'new-post',
+      link: '/blog/ai-in-design',
+      uid: 'ai-in-design',
     },
     {
       title: 'AI 인터페이스 재설계 | 행동 가능한 UX',
@@ -360,8 +360,8 @@ export const ALL_BLOG_POSTS = {
     {
       title: 'How Product Designers Can Use AI in Their Work',
       description: 'Improving workflows from design to development with AI',
-      link: '/blog/new-post',
-      uid: 'new-post',
+      link: '/blog/ai-in-design',
+      uid: 'ai-in-design',
     },
     {
       title: 'Making Shareholder Agreements Accessible for Everyone',
@@ -387,8 +387,8 @@ export const ALL_BLOG_POSTS = {
     {
       title: '프로덕트 디자이너가 업무에 AI를 활용하는 방법',
       description: '디자인부터 개발까지, AI로 워크플로우 개선하기',
-      link: '/blog/new-post',
-      uid: 'new-post',
+      link: '/blog/ai-in-design',
+      uid: 'ai-in-design',
     },
     {
       title: 'AI 인터페이스 재설계 | 행동 가능한 UX',
