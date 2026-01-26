@@ -1,6 +1,7 @@
 import { Header } from '../header'
 import { Footer } from '../footer'
 import type { ReactNode } from 'react'
+import { Analytics } from "@vercel/analytics/next"
 
 type Locale = 'ko' | 'en'
 const SUPPORTED_LOCALES = new Set<Locale>(['ko', 'en'])
