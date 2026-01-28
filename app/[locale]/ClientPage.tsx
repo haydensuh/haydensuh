@@ -14,8 +14,6 @@ import {
   MorphingDialogClose,
   MorphingDialogContainer,
 } from '@/components/ui/morphing-dialog'
-import { AnimatedBackground } from '@/components/ui/animated-background'
-
 import {
   PROJECTS,
   WORK_EXPERIENCE,
@@ -27,6 +25,17 @@ import { Locale } from '@/lib/i18n-config'
 
 type Props = {
   locale: Locale
+}
+
+function formatUpdatedAt(locale: Locale, updatedAt?: string) {
+  if (!updatedAt) return ''
+  const date = new Date(updatedAt)
+  if (Number.isNaN(date.getTime())) return updatedAt
+  return new Intl.DateTimeFormat(locale === 'ko' ? 'ko-KR' : 'en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  }).format(date)
 }
 
 function ProjectVideo({ src }: { src: string }) {
@@ -158,22 +167,30 @@ export default function ClientPage({ locale }: Props) {
         }}
         transition={{ duration: 0.3 }}
       >
-        <h3 className="mb-3 text-lg font-medium">Blog</h3>
-        <div className="flex flex-col space-y-0">
-          <AnimatedBackground
-            enableHover
-            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
+        <div className="mb-3 flex items-center justify-between">
+          <h3 className="text-lg font-medium">Selected Posts</h3>
+          <Link
+            href={`/${locale}/blog`}
+            className="group flex items-center text-sm text-zinc-500 dark:text-zinc-400"
           >
-            {blogPosts.map((post, index) => (
-              <Link
-                key={post.uid}
-                href={`/${locale}${post.link}`}
-                className="-mx-3 rounded-xl px-3 py-3"
-                data-id={post.uid}
-              >
-                <div className="flex flex-col space-y-1">
+            {locale === 'en' ? 'View all' : '더보기'}
+            <ArrowRightIcon
+              size={14}
+              className="transition-transform group-hover:translate-x-1"
+            />
+          </Link>
+        </div>
+        <div>
+          {blogPosts.map((post, index) => (
+            <Link
+              key={post.uid}
+              href={`/${locale}${post.link}`}
+              className="group -mx-4 flex flex-col gap-4 rounded-xl px-4 py-4 transition hover:bg-zinc-50 dark:hover:bg-zinc-800/40 sm:flex-row sm:items-start sm:justify-between"
+            >
+              <div className="min-w-0 flex-1">
+                <div className="space-y-1">
                   <div className="flex items-center gap-2">
-                    <h4 className="font-normal dark:text-zinc-100">
+                    <h4 className="font-normal text-zinc-900 dark:text-zinc-100">
                       {post.title}
                     </h4>
                     {index === 0 ? (
@@ -183,13 +200,26 @@ export default function ClientPage({ locale }: Props) {
                       </span>
                     ) : null}
                   </div>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                  <p className="text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
                     {post.description}
                   </p>
                 </div>
-              </Link>
-            ))}
-          </AnimatedBackground>
+
+                <p className="mt-2 text-sm text-zinc-400 dark:text-zinc-500">
+                  {formatUpdatedAt(locale, post.updatedAt)}
+                </p>
+              </div>
+
+              {post.image ? (
+                <img
+                  src={post.image}
+                  alt=""
+                  className="h-48 w-full rounded-xl object-cover outline outline-1 outline-zinc-200 dark:outline-zinc-800 sm:h-20 sm:w-32"
+                  loading="lazy"
+                />
+              ) : null}
+            </Link>
+          ))}
         </div>
       </motion.section>
 

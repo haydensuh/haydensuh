@@ -2,8 +2,8 @@
 
 import { ALL_BLOG_POSTS } from '../../data'
 import Link from 'next/link'
+import { Pin } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { AnimatedBackground } from '@/components/ui/animated-background'
 import { BackButton } from '@/components/ui/back-button'
 import { usePathname } from 'next/navigation'
 const VARIANTS_CONTAINER = {
@@ -23,6 +23,17 @@ const VARIANTS_SECTION = {
 
 const TRANSITION_SECTION = {
   duration: 0.3,
+}
+
+function formatUpdatedAt(locale: 'en' | 'ko', updatedAt?: string) {
+  if (!updatedAt) return ''
+  const date = new Date(updatedAt)
+  if (Number.isNaN(date.getTime())) return updatedAt
+  return new Intl.DateTimeFormat(locale === 'ko' ? 'ko-KR' : 'en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric',
+  }).format(date)
 }
 export default function BlogPage() {
   const pathname = usePathname()
@@ -47,34 +58,45 @@ export default function BlogPage() {
 
         <h3 className="mb-5 text-lg font-medium">All Posts</h3>
 
-        <div className="flex flex-col space-y-0">
-          <AnimatedBackground
-            enableHover
-            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
-            transition={{
-              type: 'spring',
-              bounce: 0,
-              duration: 0.2,
-            }}
-          >
-            {AllBlogPosts.map((post) => (
-              <Link
-                key={post.uid}
-                className="-mx-3 rounded-xl px-3 py-3"
-                href={post.link}
-                data-id={post.uid}
-              >
-                <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal dark:text-zinc-100">
-                    {post.title}
-                  </h4>
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
+        <div>
+          {AllBlogPosts.map((post, index) => (
+            <Link
+              key={post.uid}
+              href={`/${locale}${post.link}`}
+              className="group -mx-4 flex flex-col gap-4 rounded-xl px-4 py-4 transition hover:bg-zinc-50 dark:hover:bg-zinc-800/40 sm:flex-row sm:items-start sm:justify-between"
+            >
+              <div className="min-w-0 flex-1">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <h4 className="font-normal text-zinc-900 dark:text-zinc-100">
+                      {post.title}
+                    </h4>
+                    {index === 0 ? (
+                      <span className="inline-flex items-center rounded-full bg-zinc-200/70 px-2 py-0.5 text-[11px] font-medium text-zinc-700 dark:bg-zinc-800/80 dark:text-zinc-200">
+                        <Pin className="mr-1 h-3 w-3" />
+                        {locale === 'en' ? 'Pinned' : 'Pinned'}
+                      </span>
+                    ) : null}
+                  </div>
+                  <p className="text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
                     {post.description}
                   </p>
                 </div>
-              </Link>
-            ))}
-          </AnimatedBackground>
+                <p className="mt-2 text-sm text-zinc-400 dark:text-zinc-500">
+                  {formatUpdatedAt(locale, post.updatedAt)}
+                </p>
+              </div>
+
+              {post.image ? (
+                <img
+                  src={post.image}
+                  alt=""
+                  className="h-48 w-full rounded-xl object-cover outline outline-1 outline-zinc-200 dark:outline-zinc-800 sm:h-20 sm:w-32"
+                  loading="lazy"
+                />
+              ) : null}
+            </Link>
+          ))}
         </div>
       </motion.section>
     </motion.main>

@@ -306,25 +306,27 @@ export const BLOG_POSTS = {
       description: 'Improving workflows from design to development with AI',
       link: '/blog/ai-in-design',
       uid: 'ai-in-design',
-    },
-    {
-      title: 'Making Shareholder Agreements Accessible for Everyone',
-      description:
-        "What I learned while designing ZUZU's shareholder agreement feature",
-      link: '/blog/shareholder-contract-experience',
-      uid: 'shareholder-contract-experience',
+      updatedAt: '2026-01-08',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/v1767339739/Frame_1310330235_uhlgjn.png',
     },
     {
       title: 'A Recommendation Is Not Enough',
       description: 'Rethinking AI UX through business purpose suggestions',
       link: '/blog/post-chat-ui',
       uid: 'post-chat-ui',
+      updatedAt: '2025-08-25',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321245_ivv3re.png',
     },
     {
       title: 'How Do We Define Satisfaction?',
       description: 'Defining satisfaction through operational definition',
       link: '/blog/zuzu-operational-definition',
       uid: 'zuzu-operational-definition',
+      updatedAt: '2025-08-25',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/Group_427321255_mohqgk.png',
     },
   ],
   ko: [
@@ -333,24 +335,27 @@ export const BLOG_POSTS = {
       description: '디자인부터 개발까지, AI로 워크플로우 개선하기',
       link: '/blog/ai-in-design',
       uid: 'ai-in-design',
+      updatedAt: '2026-01-08',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/v1767339739/Frame_1310330235_uhlgjn.png',
     },
     {
       title: 'AI 인터페이스 재설계 | 행동 가능한 UX',
       description: '사업목적 추천 기능을 설계하며 다시 생각한 AI 인터페이스',
       link: '/blog/post-chat-ui',
       uid: 'post-chat-ui',
+      updatedAt: '2025-09-09',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321245_ivv3re.png',
     },
     {
       title: '만족도를 어떻게 정의할 것인가?',
       description: 'ZUZU의 법인 설립 기능을 통해 본 조작적 정의',
       link: '/blog/zuzu-operational-definition',
       uid: 'zuzu-operational-definition',
-    },
-    {
-      title: '낯설고 어려운 주주간계약서 작성을 누구나 쉽게',
-      description: '주주간계약서 작성 기능을 설계하며 배운 것들',
-      link: '/blog/shareholder-contract-experience',
-      uid: 'shareholder-contract-experience',
+      updatedAt: '2025-09-03',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/Group_427321255_mohqgk.png',
     },
   ],
 }
@@ -362,6 +367,9 @@ export const ALL_BLOG_POSTS = {
       description: 'Improving workflows from design to development with AI',
       link: '/blog/ai-in-design',
       uid: 'ai-in-design',
+      updatedAt: '2026-01-08',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/v1767339739/Frame_1310330235_uhlgjn.png',
     },
     {
       title: 'Making Shareholder Agreements Accessible for Everyone',
@@ -369,18 +377,27 @@ export const ALL_BLOG_POSTS = {
         "What I learned while designing ZUZU's shareholder agreement feature",
       link: '/blog/shareholder-contract-experience',
       uid: 'shareholder-contract-experience',
+      updatedAt: '2025-12-03',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321247_bubzaf.png',
     },
     {
       title: 'A Recommendation Is Not Enough',
       description: 'Rethinking AI UX through business purpose suggestions',
       link: '/blog/post-chat-ui',
       uid: 'post-chat-ui',
+      updatedAt: '2025-08-25',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321245_ivv3re.png',
     },
     {
       title: 'How Do We Define Satisfaction?',
       description: 'Defining satisfaction through operational definition',
       link: '/blog/zuzu-operational-definition',
       uid: 'zuzu-operational-definition',
+      updatedAt: '2025-08-25',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/Group_427321255_mohqgk.png',
     },
   ],
   ko: [
@@ -389,24 +406,36 @@ export const ALL_BLOG_POSTS = {
       description: '디자인부터 개발까지, AI로 워크플로우 개선하기',
       link: '/blog/ai-in-design',
       uid: 'ai-in-design',
+      updatedAt: '2026-01-08',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/v1767339739/Frame_1310330235_uhlgjn.png',
     },
     {
       title: 'AI 인터페이스 재설계 | 행동 가능한 UX',
       description: '사업목적 추천 기능을 설계하며 다시 생각한 AI 인터페이스',
       link: '/blog/post-chat-ui',
       uid: 'post-chat-ui',
+      updatedAt: '2025-09-09',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321245_ivv3re.png',
     },
     {
       title: '만족도를 어떻게 정의할 것인가?',
       description: 'ZUZU의 법인 설립 기능을 통해 본 조작적 정의',
       link: '/blog/zuzu-operational-definition',
       uid: 'zuzu-operational-definition',
+      updatedAt: '2025-09-03',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/Group_427321255_mohqgk.png',
     },
     {
       title: '낯설고 어려운 주주간계약서 작성을 누구나 쉽게',
       description: '주주간계약서 작성 기능을 설계하며 배운 것들',
       link: '/blog/shareholder-contract-experience',
       uid: 'shareholder-contract-experience',
+      updatedAt: '2025-12-03',
+      image:
+        'https://res.cloudinary.com/hazelsuh-site/image/upload/Frame_427321247_bubzaf.png',
     },
   ],
 }
