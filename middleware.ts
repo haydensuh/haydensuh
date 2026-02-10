@@ -1,10 +1,9 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-const SUPPORTED_LOCALES = ['en', 'ko']
 const DEFAULT_LOCALE = 'en'
-// Temporary: disable auth gating for works pages
-const TEMP_DISABLE_AUTH = true
+// Temporary: disable auth gating for works pages (works list is open, works detail requires password)
+const TEMP_DISABLE_AUTH = false
 
 export function middleware(request: NextRequest) {
   const token = request.cookies.get('auth_token')?.value
@@ -32,12 +31,6 @@ export function middleware(request: NextRequest) {
   }
 
   return NextResponse.next()
-}
-
-// 🔧 경로에서 locale 추출하는 유틸
-function getLocaleFromPath(path: string) {
-  const match = path.match(/^\/(en|ko)/)
-  return match?.[1] || DEFAULT_LOCALE
 }
 
 export const config = {
