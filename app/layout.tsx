@@ -11,7 +11,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Hayden Suh Portfolio',
+  title: 'Hyunjung Suh Portfolio',
   description:
     'Product Designer with a strategic mindset and frontend literacy.',
   icons: {
