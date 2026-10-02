@@ -35,7 +35,7 @@ export function Header({ locale }: HeaderProps) {
             href={`/${locale}`}
             className="font-medium text-black dark:text-white"
           >
-            {locale === 'ko' ? '서현정 포트폴리오' : 'Hayden Suh'}
+            {locale === 'ko' ? '서현정 포트폴리오' : 'Hyunjung Suh'}
           </Link>
           {isAuthenticated && <LogoutButton />}
         </div>
